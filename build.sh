@@ -40,7 +40,7 @@ command -v npx > /dev/null 2>&1 && {
     --bracket-same-line  \
     --log-level error    \
     --no-bracket-spacing \
-    --print-width 256    \
+    --print-width 100    \
     --tab-width 4        \
     --write source.html
 } || true
