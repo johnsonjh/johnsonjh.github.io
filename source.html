@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" href="EBGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" href="JunicodeVF-Roman.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" href="JunicodeVF-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link rel="preload" href="Strassburg-Fraktur.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
+        <title>Manuscript</title>
+
+        <style>
+            body {
+                visibility: hidden;
+            }
+            @font-face {
+                font-family: "Junicode";
+                src: url("JunicodeVF-Roman.woff2") format("woff2");
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "Junicode";
+                src: url("JunicodeVF-Italic.woff2") format("woff2");
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: "EB Garamond";
+                src: url("EBGaramond-Regular.woff2") format("woff2");
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: "EB Garamond";
+                src: url("EBGaramond-Italic.woff2") format("woff2");
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: "Strassburg Fraktur";
+                src: url("Strassburg-Fraktur.woff2") format("woff2");
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            html {
+                font-family: "EB Garamond";
+                font-kerning: normal;
+                font-feature-settings:
+                    "liga" 1,
+                    "clig" 1,
+                    "calt" 1,
+                    "dlig" 1,
+                    "hlig" 1,
+                    "hist" 1;
+                text-align: justify;
+                font-size: 1.2em;
+                margin: 4% 9% 4% 9%;
+            }
+
+            .pending-transform {
+                unicode-bidi: isolate;
+                white-space: nowrap;
+                color: red;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .transformed {
+                display: inline-block;
+                font-feature-settings: "hist" 0;
+                unicode-bidi: isolate;
+                white-space: nowrap;
+                display: contents;
+            }
+
+            .char {
+                opacity: 0;
+                transform: scale(0.95);
+                transition:
+                    opacity 0.15s ease-out,
+                    transform 0.15s ease-out;
+            }
+
+            .char.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .dropcap {
+                font-family: "Strassburg Fraktur";
+                font-style: italic;
+                font-size: 260%;
+                line-height: 1;
+                margin-bottom: -0.35em;
+                vertical-align: baseline;
+                display: inline-block;
+            }
+
+            .tight {
+                margin-top: 0em;
+                margin-bottom: 0em;
+                line-height: 0.5;
+            }
+        </style>
+        <noscript>
+            <style>
+                body {
+                    visibility: visible;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <p class="tight" style="text-align: center">
+            <span style="font-family: &quot;Junicode&quot;; font-size: clamp(6vw, 6vw, 4rem); font-variant: small-caps; letter-spacing: 0.4em; white-space: nowrap">Illuminationes</span>
+        </p>
+        <hr />
+
+        <p>Ctctctffifffthu</p>
+
+        <p>The fictitious affluent coffee sufficient official different office Thistle Thames staff acta select skies standard cctt sstt FFI ffi ffl.</p>
+
+        <p>
+            <i> The fictitious affluent coffee sufficient official different office Thistle Thames staff acta select skies standard cctt sstt FFI ffi ffl. </i>
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+            quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+            eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+            reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </p>
+
+        <script>
+            function wrapFirstChar(paragraphs) {
+                for (const p of paragraphs) {
+                    const nodes = Array.from(p.childNodes);
+                    for (const node of nodes) {
+                        if (node.nodeType === Node.TEXT_NODE) {
+                            const text = node.textContent.trimStart();
+                            if (text.length === 0) continue;
+
+                            const index = node.textContent.indexOf(text[0]);
+                            const before = node.textContent.slice(0, index);
+                            const rest = node.textContent.slice(index + 1);
+
+                            const span = document.createElement("span");
+                            span.classList.add("dropcap");
+                            span.textContent = text[0];
+
+                            const frag = document.createDocumentFragment();
+                            if (before) frag.appendChild(document.createTextNode(before));
+                            frag.appendChild(span);
+                            if (rest) frag.appendChild(document.createTextNode(rest));
+
+                            p.replaceChild(frag, node);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", async function () {
+                await document.fonts.ready;
+                const paragraphs = document.querySelectorAll("p");
+                wrapFirstChar(paragraphs);
+
+                function wrapChars(node) {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        const text = node.textContent;
+                        const frag = document.createDocumentFragment();
+                        for (let i = 0; i < text.length; i++) {
+                            const span = document.createElement("span");
+                            span.classList.add("char");
+                            span.textContent = text[i];
+                            if (text[i] === "s" || text[i] === "J") {
+                                span.classList.add("pending-transform");
+                            }
+                            frag.appendChild(span);
+                        }
+                        node.parentNode.replaceChild(frag, node);
+                    } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+                        Array.from(node.childNodes).forEach((child) => wrapChars(child));
+                    }
+                }
+                wrapChars(document.body);
+                document.body.style.visibility = "visible";
+
+                async function animateParagraphs(paragraphs, sConversionDelay = 50) {
+                    for (const p of paragraphs) {
+                        const charSpans = p.querySelectorAll(".char");
+                        for (const span of charSpans) {
+                            span.classList.add("visible");
+                            if (span.classList.contains("pending-transform")) {
+                                await new Promise((resolve) => setTimeout(resolve, sConversionDelay));
+                                span.classList.remove("pending-transform");
+                                span.classList.add("transformed");
+                            }
+                        }
+                    }
+                }
+
+                addDarkmodeWidget();
+                await animateParagraphs(paragraphs);
+
+                const lastPara = document.querySelector("p:last-of-type");
+                if (lastPara) {
+                    const shim = document.createElement("span");
+                    shim.textContent = "\u00A0.";
+                    shim.style.whiteSpace = "nowrap";
+                    shim.style.display = "inline";
+                    shim.style.opacity = "0";
+                    shim.style.fontSize = "0.01px";
+                    shim.setAttribute("aria-hidden", "true");
+                    lastPara.appendChild(shim);
+                }
+            });
+        </script>
+    </body>
+</html>
