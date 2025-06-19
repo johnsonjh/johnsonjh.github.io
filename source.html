@@ -123,8 +123,8 @@
                 opacity: 0;
                 transform: scale(0.95);
                 transition:
-                    opacity 0.15s ease-out,
-                    transform 0.15s ease-out;
+                    opacity 0.07s ease-out,
+                    transform 0.07s ease-out;
             }
 
             .char.visible {
@@ -323,7 +323,7 @@
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
             architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
             sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit.
         </p>
 
         <p>
@@ -421,7 +421,7 @@
 
                 document.body.style.visibility = "visible";
 
-                async function animateParagraphs(paragraphs, sConversionDelay = 72) {
+                async function animateParagraphs(paragraphs, sConversionDelay = 40) {
                     for (const p of paragraphs) {
                         const charSpans = p.querySelectorAll(".char");
                         for (const span of charSpans) {
