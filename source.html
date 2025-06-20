@@ -263,7 +263,7 @@
 
     <body>
         <p class="tight title" style="text-align: center">
-            <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☾</button>
+            <button style="font-family: Junicode" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">●</button>
             <span
                 style="
                     font-family: Junicode;
@@ -478,7 +478,7 @@
 
             function setTheme(dark) {
                 document.documentElement.classList.toggle("dark-mode", dark);
-                document.getElementById("theme-toggle").textContent = dark ? "☼" : "☾";
+                document.getElementById("theme-toggle").textContent = dark ? "☼" : "●";
             }
 
             function getStoredTheme() {
