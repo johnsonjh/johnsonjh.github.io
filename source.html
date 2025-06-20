@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="light dark" />
+        <meta name="darkreader-lock" />
 
         <script>
             (function () {
@@ -65,43 +66,43 @@
             }
             @font-face {
                 font-family: "Junicode";
+                font-style: normal;
+                font-weight: 400;
                 src: url("JunicodeVF-Roman.woff2") format("woff2");
-                font-weight: 400;
-                font-style: normal;
             }
 
             @font-face {
                 font-family: "EB Garamond";
+                font-style: normal;
+                font-weight: 400;
                 src: url("EBGaramond-Regular.woff2") format("woff2");
-                font-weight: 400;
-                font-style: normal;
             }
 
             @font-face {
                 font-family: "EB Garamond";
-                src: url("EBGaramond-Italic.woff2") format("woff2");
-                font-weight: 400;
                 font-style: italic;
+                font-weight: 400;
+                src: url("EBGaramond-Italic.woff2") format("woff2");
             }
 
             @font-face {
                 font-family: "Strassburg Fraktur";
-                src: url("Strassburg-Fraktur.woff2") format("woff2");
-                font-weight: 400;
                 font-style: normal;
+                font-weight: 400;
+                src: url("Strassburg-Fraktur.woff2") format("woff2");
             }
 
             @font-face {
                 font-family: "Typewriter";
-                src: url("Typewriter.woff2") format("woff2");
-                font-weight: 400;
                 font-style: normal;
+                font-weight: 400;
+                src: url("Typewriter.woff2") format("woff2");
             }
 
             html {
                 font-family: "EB Garamond";
                 font-kerning: normal;
-                text-rendering: optimizeLegibility;
+                font-size: 1.35em;
                 font-feature-settings:
                     "liga" 1,
                     "clig" 1,
@@ -109,9 +110,9 @@
                     "dlig" 1,
                     "hlig" 1,
                     "hist" 1;
-                text-align: justify;
-                font-size: 1.35em;
                 margin: 4% 9% 0.2% 9%;
+                text-align: justify;
+                text-rendering: optimizeLegibility;
             }
 
             @media (max-width: 600px) {
@@ -121,15 +122,13 @@
             }
 
             .pending-transform {
-                unicode-bidi: isolate;
-                white-space: nowrap;
                 color: red;
                 font-weight: bold;
+                unicode-bidi: isolate;
                 white-space: nowrap;
             }
 
             .transformed {
-                display: inline-block;
                 font-feature-settings: "hist" 0;
                 unicode-bidi: isolate;
                 white-space: nowrap;
@@ -150,19 +149,20 @@
             }
 
             .dropcap {
+                display: inline-block;
                 font-family: "Strassburg Fraktur";
-                font-style: italic;
+                font-optical-sizing: none;
                 font-size: 260%;
+                font-style: italic;
                 line-height: 1;
                 margin-bottom: -0.35em;
                 margin-left: 0.14em;
                 vertical-align: baseline;
-                display: inline-block;
             }
 
             .tight {
-                margin-top: 0em;
                 margin-bottom: 0em;
+                margin-top: 0em;
             }
 
             .title {
@@ -172,12 +172,12 @@
             span.no-ligatures {
                 text-align: start;
                 font-feature-settings:
-                    "liga" 0,
-                    "clig" 0,
                     "calt" 0,
+                    "clig" 0,
                     "dlig" 0,
+                    "hist" 0,
                     "hlig" 0,
-                    "hist" 0;
+                    "liga" 0;
             }
 
             ol {
@@ -185,37 +185,37 @@
             }
 
             ol li {
-                counter-increment: item;
                 align-items: flex-start;
+                counter-increment: item;
                 display: flex;
                 list-style: none;
-                padding-left: 0em;
                 margin-left: 0;
+                padding-left: 0em;
             }
 
             ol li::before {
                 content: counter(item) ". ";
                 font-feature-settings: "onum";
-                font-variant-numeric: oldstyle-nums;
                 font-size: 86%;
+                font-variant-numeric: oldstyle-nums;
+                margin-right: 0.2em;
                 position: relative;
                 top: -0.25em;
-                margin-right: 0.2em;
             }
 
             ul li {
                 align-items: flex-start;
                 display: flex;
-                list-style: none;
-                padding-left: 0em;
-                margin-left: 0;
                 font-feature-settings: "onum";
                 font-variant-numeric: oldstyle-nums;
+                list-style: none;
+                margin-left: 0;
+                padding-left: 0em;
             }
 
             ul li::before {
-                font-size: 92%;
                 content: "☞";
+                font-size: 92%;
                 margin-right: 0.2em;
             }
 
@@ -226,15 +226,15 @@
 
             html,
             body {
-                -webkit-text-size-adjust: none;
                 text-size-adjust: none;
+                -webkit-text-size-adjust: none;
             }
 
             :root {
-                --bg-light: #f2f1e7;
-                --text-light: #09162d;
                 --bg-dark: #191b1c;
+                --bg-light: #f2f1e7;
                 --text-dark: #ddd7c1;
+                --text-light: #09162d;
             }
 
             html,
@@ -263,15 +263,15 @@
             }
 
             #theme-toggle {
-                position: fixed;
-                top: 0.3em;
-                right: 0.4em;
-                z-index: 1000;
                 background: none;
                 border: none;
+                color: #000;
                 cursor: pointer;
                 font-size: clamp(4vw, 4vw, 3rem);
-                color: #000;
+                position: fixed;
+                right: 0.4em;
+                top: 0.3em;
+                z-index: 1000;
             }
 
             html.notransition *,
