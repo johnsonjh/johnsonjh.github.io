@@ -42,23 +42,12 @@ command -v npx > /dev/null 2>&1 && {
     --no-bracket-spacing \
     --print-width 132    \
     --tab-width 4        \
-    --write source.html
+    --write \
+	housestyle.js \
+	index.html \
+	manuscript.css \
+	manuscript.js \
+	manuscript.top.js \
+	versify.css \
+	versify.js
 } || true
-
-########################################################################
-# Minify
-
-command -v minify > /dev/null 2>&1 || {
-  printf '%s\n' "⚠ minify missing!" 2> /dev/null || true
-} || true
-
-command -v minify > /dev/null 2>&1 && {
-  # minify from https://github.com/tdewolff/minify.git
-  printf '%s\n' "• Minify …" 2> /dev/null || true
-  minify source.html > index.html
-} || {
-  printf '%s\n' "• cp -f source.html index.html" 2> /dev/null || true
-  cp -f source.html index.html
-}
-
-########################################################################
