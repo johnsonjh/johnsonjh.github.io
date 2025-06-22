@@ -44,10 +44,5 @@ command -v npx > /dev/null 2>&1 && {
     --tab-width 4        \
     --write \
 	housestyle.js \
-	index.html \
-	manuscript.css \
-	manuscript.js \
-	manuscript.top.js \
-	versify.css \
-	versify.js
+	index.html
 } || true
