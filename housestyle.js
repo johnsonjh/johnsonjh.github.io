@@ -581,7 +581,6 @@
         ["Estrus", "Œstrus"],
         ["et caetera", "et cætera"],
         ["Et caetera", "Et cætera"],
-        ["etc.", "&c."],
         ["et cetera", "et cætera"],
         ["etcetera", "et cætera"],
         ["Et cetera", "Et cætera"],

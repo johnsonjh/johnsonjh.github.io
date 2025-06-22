@@ -46,3 +46,5 @@ command -v npx > /dev/null 2>&1 && {
 	housestyle.js \
 	index.html
 } || true
+
+grep 'etc\.' ./*.html || true
