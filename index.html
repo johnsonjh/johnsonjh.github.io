@@ -287,6 +287,7 @@
             (function () {
                 try {
                     var theme = localStorage.getItem("theme");
+
                     if (!theme) {
                         theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
                     }
@@ -465,8 +466,8 @@
                             const index = node.textContent.indexOf(text[0]);
                             const before = node.textContent.slice(0, index);
                             const rest = node.textContent.slice(index + 1);
-
                             const span = document.createElement("span");
+
                             span.classList.add("dropcap");
                             span.textContent = text[0];
 
@@ -497,6 +498,7 @@
 
                         for (let i = 0; i < text.length; i++) {
                             const span = document.createElement("span");
+
                             span.classList.add("char");
                             span.textContent = text[i];
 
@@ -535,6 +537,7 @@
                 await animateParagraphs(paragraphs);
 
                 const lastPara = document.querySelector("p:last-of-type");
+
                 if (lastPara) {
                     const shim = document.createElement("span");
                     shim.textContent = "\u00A0.";
@@ -598,6 +601,7 @@
                     }
 
                     isProcessing = true;
+
                     try {
                         const rawText = el.dataset.raw || el.textContent;
 
@@ -606,6 +610,7 @@
                         }
 
                         const tempTextNode = document.createTextNode(rawText);
+
                         el.innerHTML = "";
                         el.appendChild(tempTextNode);
 
@@ -661,7 +666,9 @@
                                 const spaces = match ? match[2] : "";
 
                                 span.textContent = core;
+
                                 const quote = document.createElement("span");
+
                                 quote.className = "closer";
                                 quote.textContent = "”";
                                 span.appendChild(quote);
