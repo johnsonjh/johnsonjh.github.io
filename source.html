@@ -266,7 +266,7 @@
         <noscript>
             <style>
                 body {
-                    visibility: visible;
+                    visibility: visible !important;
                 }
             </style>
         </noscript>
@@ -404,6 +404,7 @@
             function wrapFirstChar(paragraphs) {
                 for (const p of paragraphs) {
                     const nodes = Array.from(p.childNodes);
+
                     for (const node of nodes) {
                         if (node.nodeType === Node.TEXT_NODE) {
                             const text = node.textContent.trimStart();
