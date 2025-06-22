@@ -55,6 +55,8 @@
         ["Aeroscopes", "Aëroscopes"],
         ["aerostat", "aërostat"],
         ["Aerostat", "Aërostat"],
+        ["Aesop", "Æsop"],
+        ["Aesop\'s", "Æsop\'s"],
         ["aesthetic", "æsthetic"],
         ["Aesthetic", "Æsthetic"],
         ["aether", "æther"],
