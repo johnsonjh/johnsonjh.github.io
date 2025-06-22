@@ -1,0 +1,30 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+blockquote.verse {
+  position: relative;
+  margin: 0.7em;
+  padding-left: 0em;
+  line-height: 1.4;
+  font-style: italic;
+  transform: translateZ(0);
+}
+
+.verse .vline {
+  display: block;
+  position: relative;
+}
+
+.verse .vline::before {
+  content: "“";
+  position: absolute;
+  left: -0.75em;
+  top: 0;
+}
+
+.verse .vline .closer {
+  letter-spacing: -0.5px;
+  position: relative;
+}
