@@ -40,11 +40,13 @@ command -v npx > /dev/null 2>&1 && {
     --bracket-same-line  \
     --log-level error    \
     --no-bracket-spacing \
-    --print-width 132    \
+    --print-width 100    \
     --tab-width 4        \
     --write \
 	housestyle.js \
 	index.html
 } || true
 
-grep 'etc\.' ./*.html || true
+grep -n 'etc' ./*.html && {
+  printf '%s\n' "⚠ 'etc' should be '<small>%c</small>'"
+} || true

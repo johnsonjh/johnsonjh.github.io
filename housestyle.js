@@ -1682,7 +1682,9 @@
         while ((node = walker.nextNode())) {
             let text = node.textContent;
             for (const [from, to] of replacements.entries()) {
-                const keyPattern = from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s+");
+                const keyPattern = from
+                    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+                    .replace(/ /g, "\\s+");
                 const regex = new RegExp(keyPattern + "(?=[.,!?:;]|\\s|$)", "gi");
                 text = text.replace(regex, to);
             }

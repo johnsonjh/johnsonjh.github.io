@@ -6,11 +6,36 @@
         <meta name="color-scheme" content="light dark" />
         <meta name="darkreader-lock" />
 
-        <link rel="preload" href="EBGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-        <link rel="preload" href="EBGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-        <link rel="preload" href="JunicodeVF-Roman.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-        <link rel="preload" href="Typewriter.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-        <link rel="preload" href="Strassburg-Fraktur.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+        <link
+            rel="preload"
+            href="EBGaramond-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous" />
+        <link
+            rel="preload"
+            href="EBGaramond-Italic.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous" />
+        <link
+            rel="preload"
+            href="JunicodeVF-Roman.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous" />
+        <link
+            rel="preload"
+            href="Typewriter.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous" />
+        <link
+            rel="preload"
+            href="Strassburg-Fraktur.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous" />
 
         <title>Manuscript</title>
 
@@ -101,8 +126,8 @@
                 opacity: 0;
                 transform: scale(0.95);
                 transition:
-                    opacity 0.07s ease-out,
-                    transform 0.07s ease-out;
+                    opacity 0.01s ease-out,
+                    transform 0.01s ease-out;
             }
 
             .char.visible {
@@ -193,7 +218,7 @@
             }
 
             :root {
-                --bg-dark: #212223;
+                --bg-dark: #192021;
                 --bg-light: #f2f1e7;
                 --text-dark: #ddd9d1;
                 --text-light: #09162d;
@@ -204,8 +229,8 @@
                 background: var(--bg-light);
                 color: var(--text-light);
                 transition:
-                    background 0.3s,
-                    color 0.3s;
+                    background 0.01s,
+                    color 0.01s;
             }
 
             html.dark-mode,
@@ -281,6 +306,10 @@
             blockquote {
                 font-feature-settings: "hlig" 0;
             }
+
+            .tight-s {
+                letter-spacing: -0.092em;
+            }
         </style>
 
         <script>
@@ -289,7 +318,9 @@
                     var theme = localStorage.getItem("theme");
 
                     if (!theme) {
-                        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                        theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+                            ? "dark"
+                            : "light";
                     }
 
                     if (theme === "dark") {
@@ -311,7 +342,13 @@
 
     <body>
         <p class="tight title" style="text-align: center">
-            <button style="font-family: Symbola" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">●</button>
+            <button
+                style="font-family: Symbola"
+                id="theme-toggle"
+                aria-label="Toggle theme"
+                title="Toggle theme">
+                ●
+            </button>
             <span
                 style="
                     font-family: Junicode;
@@ -325,8 +362,11 @@
         </p>
         <hr />
 
-        <p style="text-align: center">
-            <i> Fictitious affluent coffee sufficient official different office Thistle Thames… </i>
+        <p style="text-wrap: balance; max-width: 90vw; text-align: center">
+            <i
+                >Mei Se<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
+                Commentarii Collecti…</i
+            >
         </p>
 
         <p class="title" style="text-align: center">
@@ -339,16 +379,17 @@
         </p>
 
         <p>
-            The fictitious affluent coffee sufficient official different office Thistle Thames staff acta select skies standard cctt
-            sstt FFI ffi ffl.
+            The fictitious affluent coffee sufficient official different office Thistle Thames staff
+            acta select skies standard cctt sstt FFI ffi ffl.
         </p>
 
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.&nbsp; Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.&nbsp; Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.&nbsp; Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id ẽ
-            laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.&nbsp; Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&nbsp; Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.&nbsp; Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id ẽ laborum.
         </p>
 
         <ul>
@@ -360,8 +401,9 @@
             <li>
                 <p class="tight">
                     <span
-                        ><i>And</i> the Earth was without form, and void; and darkness was upon the face of the deep.&nbsp; And the
-                        Spirit of God moved upon the face of the waters.</span
+                        ><i>And</i> the Earth was without form, and void; and darkness was upon the
+                        face of the deep.&nbsp; And the Spirit of God moved upon the face of the
+                        waters.</span
                     >
                 </p>
             </li>
@@ -375,37 +417,41 @@
             <li>
                 <p class="tight">
                     <span
-                        ><i>If</i> any one ensnare another, putting a ban upon him, but he can not prove it, then he that ensnared
-                        him shall be put to death.</span
+                        ><i>If</i> any one ensnare another, putting a ban upon him, but he can not
+                        prove it, then he that ensnared him shall be put to death.</span
                     >
                 </p>
             </li>
             <li>
                 <p class="tight">
                     <span
-                        ><i>If</i> any one bring an accusation against a man, and the accused go to the river and leap into the
-                        river, if he sink in the river his accuser shall take possession of his house.&nbsp; But if the river prove
-                        that the accused is not guilty, and he escape unhurt, then he who had brought the accusation shall be put to
-                        death, while he who leaped into the river shall take possession of the house that had belonged to his
-                        accuser.
+                        ><i>If</i> any one bring an accusation against a man, and the accused go to
+                        the river and leap into the river, if he sink in the river his accuser shall
+                        take possession of his house.&nbsp; But if the river prove that the accused
+                        is not guilty, and he escape unhurt, then he who had brought the accusation
+                        shall be put to death, while he who leaped into the river shall take
+                        possession of the house that had belonged to his accuser.
                     </span>
                 </p>
             </li>
             <li>
                 <p class="tight">
                     <span
-                        ><i>If</i> any one bring an accusation of any crime before the elders, and does not prove what he has
-                        charged, he shall, if it be a capital offense charged, be put to death.</span
+                        ><i>If</i> any one bring an accusation of any crime before the elders, and
+                        does not prove what he has charged, he shall, if it be a capital offense
+                        charged, be put to death.</span
                     >
                 </p>
             </li>
         </ol>
 
         <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&nbsp; Nemo enim ipsam
-            voluptatem Zyzzy voluptas sit aspernatur aut odit aut fugit, sed est consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt.&nbsp; Neque porro quisquam est, qui dolorem ipsum quod dolor sit.
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+            architecto beatae vitae dicta sunt explicabo.&nbsp; Nemo enim ipsam voluptatem Zyzzy
+            voluptas sit aspernatur aut odit aut fugit, sed est consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt.&nbsp; Neque porro quisquam est, qui dolorem ipsum
+            quod dolor sit.
         </p>
 
         <blockquote class="verse">
@@ -417,38 +463,65 @@
         </blockquote>
 
         <p>
-            Special words and characters render as so: Æther, chymical, Quality, naïveté, ⅓, tête-à-tête, Uɴɪx<small>™</small>,
-            zoöglœæ, coup dʼétat, chamæleon, coëfficient, über, amœba, cause célèbre, reëstablished,
+            Special words and characters render as so: Æther, chymical, Quality, naïveté, ⅓,
+            tête-à-tête, Uɴɪx<small>™</small>, zoöglœæ, coup dʼétat, chamæleon, coëfficient, über,
+            amœba, cause célèbre, reëstablished,
             <small>&c</small>.
         </p>
 
         <p>
-            Quality automatic replacements?&nbsp; LaTeX re-integrated and reestablished the field of Unix pediatric palaeolithic
-            zoology.&nbsp; Such is the magical color of alchemy, <small>&c</small>.&nbsp; Take one per hour but do not exceed 4 per
-            day.
+            Quality automatic replacements?&nbsp; LaTeX re-integrated and reestablished the field of
+            Unix pediatric palaeolithic zoology.&nbsp; Such is the magical color of alchemy,
+            <small>&c</small>.&nbsp; Take one per hour but do not exceed 4 per day.
         </p>
 
         <p>
-            Amet, consectetur, adipisci velit, sed est non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-            quaerat voluptatem.&nbsp; Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-            ut aliquid ex ea commodi consequatur?&nbsp; Quis autem est eum iure reprehenderit qui in ea voluptate velit esse quam
-            nihil molestiae consequatur, ezt illum qui dolorem eum fugiat quo voluptas nulla Julian
+            Amet, consectetur, adipisci velit, sed est non numquam eius modi tempora incidunt ut
+            labore et dolore magnam aliquam quaerat voluptatem.&nbsp; Ut enim ad minima veniam, quis
+            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur?&nbsp; Quis autem est eum iure reprehenderit qui in ea voluptate velit esse
+            quam nihil molestiae consequatur, ezt illum qui dolorem eum fugiat quo voluptas nulla
+            Julian
             <span style="white-space: nowrap">pariatur?<span class="symbola">&nbsp;⸎</span></span>
         </p>
 
         <p style="white-space: nowrap">
-            <span class="no-ligatures" style="font-family: Junicode; font-size: 70%; white-space: nowrap">
-                <span style="vertical-align: -0.085em; font-family: Symbola; font-size: 150%">⅌&nbsp;</span
+            <span
+                class="no-ligatures"
+                style="font-family: Junicode; font-size: 70%; white-space: nowrap">
+                <span style="vertical-align: -0.085em; font-family: Symbola; font-size: 150%"
+                    >⅌&nbsp;</span
                 >Jeffrey&nbsp;H.&nbsp;Johnson</span
-            >&nbsp;<span class="no-ligatures" style="font-family: Typewriter; font-size: 60%; white-space: nowrap"
-                ><i>&lt;</i>trnsz<span class="no-ligatures" style="font-family: Typewriter; font-size: 75%; white-space: nowrap"
+            >&nbsp;<span
+                class="no-ligatures"
+                style="font-family: Typewriter; font-size: 60%; white-space: nowrap"
+                ><i>&lt;</i>trnsz<span
+                    class="no-ligatures"
+                    style="font-family: Typewriter; font-size: 75%; white-space: nowrap"
                     >@</span
                 >pobox.com<i>&gt;</i></span
             >
         </p>
         <hr />
-        <p class="tight" style="text-align: center; line-height: 0.01">
-            <span style="font-size: 56%; font-family: Typewriter"><sub>*</sub>&nbsp;&nbsp;2025-06-22&nbsp;&nbsp;<sub>*</sub></span>
+        <p
+            class="tight"
+            style="text-wrap: balance; max-width: 90vw; text-align: center; font-size: 65%">
+            <!-- XXX -->
+            <span
+                style='
+		    font-family: &apos;Junicode&apos;,
+                    font-size: 85%;
+                    font-feature-settings:
+                        "smcp" 1,
+                        "calt" 1,
+                        "clig" 1,
+                        "dlig" 1,
+                        "hist" 1,
+                        "hlig" 1,
+                        "liga" 1;
+                '>
+                ultimum·​recognitum·​est·​ante·​diem·​Ⅸ·​kalendas·​iulias·​anno·​domini·​ⅯⅯⅩⅩⅤ
+            </span>
         </p>
         <hr />
         <p></p>
@@ -510,7 +583,11 @@
                             frag.appendChild(span);
                         }
                         node.parentNode.replaceChild(frag, node);
-                    } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== "SCRIPT" && node.nodeName !== "STYLE") {
+                    } else if (
+                        node.nodeType === Node.ELEMENT_NODE &&
+                        node.nodeName !== "SCRIPT" &&
+                        node.nodeName !== "STYLE"
+                    ) {
                         Array.from(node.childNodes).forEach((child) => wrapChars(child));
                     }
                 }
@@ -519,7 +596,7 @@
 
                 document.body.style.visibility = "visible";
 
-                async function animateParagraphs(paragraphs, sConversionDelay = 40) {
+                async function animateParagraphs(paragraphs, sConversionDelay = 1) {
                     for (const p of paragraphs) {
                         const charSpans = p.querySelectorAll(".char");
 
@@ -527,7 +604,9 @@
                             span.classList.add("visible");
 
                             if (span.classList.contains("pending-transform")) {
-                                await new Promise((resolve) => setTimeout(resolve, sConversionDelay));
+                                await new Promise((resolve) =>
+                                    setTimeout(resolve, sConversionDelay),
+                                );
                                 span.classList.remove("pending-transform");
                                 span.classList.add("transformed");
                             }
@@ -705,7 +784,7 @@
                         lastScale = currentScale;
                         redraw();
                     }
-                }, 50);
+                }, 250);
             })();
         </script>
         <script src="housestyle.js"></script>
