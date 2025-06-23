@@ -1640,9 +1640,6 @@
         return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     }
 
-    const originals = Array.from(replacements.keys()).map(escapeRegExp);
-    const regex = new RegExp("\\b(" + originals.join("|") + ")\\b", "g");
-
     document.addEventListener("DOMContentLoaded", function () {
         const walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT, {
             acceptNode: function (node) {
@@ -1659,9 +1656,13 @@
         let node;
 
         while ((node = walker.nextNode())) {
-            node.textContent = node.textContent.replace(regex, function (match) {
-                return replacements.get(match);
-            });
+            let text = node.textContent;
+            for (const [from, to] of replacements.entries()) {
+                const keyPattern = from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s+");
+                const regex = new RegExp(keyPattern + "(?=[.,!?:;]|\\s|$)", "gi");
+                text = text.replace(regex, to);
+            }
+            node.textContent = text;
         }
     });
 })();
