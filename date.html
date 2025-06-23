@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Last Modified Date</title>
+
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 2em;
+        background: #f8f8f8;
+        color: #333;
+      }
+      #lastModified {
+        font-weight: bold;
+        margin-top: 1em;
+        color: #006400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="lastModified">Checking...</p>
+
+    <script>
+      function formatDateIntl(dateStr) {
+        const date = new Date(dateStr);
+
+        if (isNaN(date)) return "Invalid date format.";
+
+        const formatter = new Intl.DateTimeFormat("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        });
+
+        return `${formatter.format(date)} UTC`;
+      }
+
+      fetch(window.location.href, { method: "HEAD" })
+        .then((response) => {
+          const lastMod = response.headers.get("Last-Modified");
+          document.getElementById("lastModified").textContent = lastMod
+            ? `Last modified: ${formatDateIntl(lastMod)}`
+            : "Unknown";
+        })
+        .catch((err) => {
+          document.getElementById("lastModified").textContent = "Unknown";
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>
