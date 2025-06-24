@@ -97,13 +97,7 @@
                 font-family: "EB Garamond";
                 font-kerning: normal;
                 font-size: 1.35em;
-                font-feature-settings:
-                    "calt" 1,
-                    "clig" 1,
-                    "dlig" 1,
-                    "hist" 1,
-                    "hlig" 1,
-                    "liga" 1;
+                font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "hist" 1, "hlig" 1, "liga" 1, "kern" 1;
                 margin: 4% 9% 0.2% 9%;
                 text-align: justify;
                 text-rendering: optimizeLegibility;
@@ -130,16 +124,11 @@
             }
 
             .char {
-                opacity: 0;
-                transform: scale(0.95);
-                transition:
-                    opacity 0.01s ease-out,
-                    transform 0.01s ease-out;
+                opacity: 1;
             }
 
             .char.visible {
                 opacity: 1;
-                transform: scale(1);
             }
 
             .dropcap {
@@ -165,13 +154,7 @@
 
             span.no-ligatures {
                 text-align: start;
-                font-feature-settings:
-                    "calt" 0,
-                    "clig" 0,
-                    "dlig" 0,
-                    "hist" 0,
-                    "hlig" 0,
-                    "liga" 0;
+                font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "hist" 0, "hlig" 0, "liga" 0;
             }
 
             ol {
@@ -404,7 +387,7 @@
 
         <p style="text-wrap: balance; max-width: 90vw; text-align: center">
             <i
-                >Se<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
+                ><span style="font-size: 120%; font-feature-settings: 'swsh' 1;">S</span>e<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
                 Commentarii Collecti…</i
             >
         </p>

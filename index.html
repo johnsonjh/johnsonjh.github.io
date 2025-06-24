@@ -103,7 +103,8 @@
                     "dlig" 1,
                     "hist" 1,
                     "hlig" 1,
-                    "liga" 1;
+                    "liga" 1,
+                    "kern" 1;
                 margin: 4% 9% 0.2% 9%;
                 text-align: justify;
                 text-rendering: optimizeLegibility;
@@ -130,16 +131,11 @@
             }
 
             .char {
-                opacity: 0;
-                transform: scale(0.95);
-                transition:
-                    opacity 0.01s ease-out,
-                    transform 0.01s ease-out;
+                opacity: 1;
             }
 
             .char.visible {
                 opacity: 1;
-                transform: scale(1);
             }
 
             .dropcap {
@@ -404,7 +400,8 @@
 
         <p style="text-wrap: balance; max-width: 90vw; text-align: center">
             <i
-                >Se<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
+                ><span style="font-size: 120%; font-feature-settings: &quot;swsh&quot; 1">S</span
+                >e<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
                 Commentarii Collecti…</i
             >
         </p>
@@ -535,7 +532,6 @@
         <p
             class="tight"
             style="text-wrap: balance; max-width: 100vw; text-align: center; font-size: 75%">
-            <!-- XXX latindate here -->
             <span
                 style='
                     font-family: Junicode,
@@ -627,7 +623,7 @@
 
                 document.body.style.visibility = "visible";
 
-                async function animateParagraphs(paragraphs, sConversionDelay = 1) {
+                async function animateParagraphs(paragraphs, sConversionDelay = 20) {
                     for (const p of paragraphs) {
                         const charSpans = p.querySelectorAll(".char");
 
