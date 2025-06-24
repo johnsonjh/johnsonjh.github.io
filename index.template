@@ -1,0 +1,113 @@
+<!-- vim: set expandtab ft=html : -->
+<br />
+
+<hr
+    style="
+        width: 50%;
+        height: 4px;
+        border-style: inset;
+        display: block;
+        background-color: #192021;
+        border: none;
+        border-top: 4px solid #e0d3af;
+    " />
+<p style="text-align: center">
+    <span
+        style="
+            display: inline-block;
+            padding-top: 0.3em;
+            font-family: &quot;EB Garamond&quot;;
+            letter-spacing: 0.8em;
+            font-size: 2.6vw;
+        "
+        ><b
+            ><span class="tight-dot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            >THE&nbsp;WEB&nbsp;PRESENCE&nbsp;OF</b
+        ></span
+    ><br />
+    <span
+        style="
+            display: inline-block;
+            text-shadow:
+                0.5px 0 currentColor,
+                -0.5px 0 currentColor,
+                0 0.5px currentColor,
+                0 -0.5px currentColor;
+            font-family: Junicode;
+            padding-top: 0.2em;
+            padding-bottom: 0em;
+            letter-spacing: 0.4em;
+            font-size: 7vw;
+        "
+        ><b
+            ><span class="tight-dot">&nbsp;&nbsp;</span
+            ><span class="tighter-dot">&nbsp;J</span>.<span class="tight-dot">H</span>.<span
+                class="tight-dot"
+                >&nbsp;</span
+            >JOHNSON</b
+        ></span
+    ><span class="tighter-dot">&nbsp;&nbsp;&nbsp;</span><br />
+    <!-- <span style="display: inline-block; font-family: 'EB Garamond'; letter-spacing: 0.2em; padding-top: 0.00em; padding-bottom: 0.5em; font-size: 2.0vw;"><b>&nbsp;CONSULTING</b></span><br> -->
+    <span
+        style="
+            display: inline-block;
+            font-family: &quot;EB Garamond&quot;;
+            text-shadow:
+                0.1px 0 currentColor,
+                -0.1px 0 currentColor,
+                0 0.1px currentColor,
+                0 -0.1px currentColor;
+            padding-top: 0em;
+            padding-bottom: 0em;
+            letter-spacing: 0.33em;
+            font-size: 4.9vw;
+        "
+        ><b>&nbsp;INFRASTRUCTURE</b></span
+    ><br />
+    <span
+        style="
+            display: inline-block;
+            font-family: &quot;EB Garamond&quot;;
+            letter-spacing: 0.4em;
+            font-size: 3vw;
+        "
+        ><span class="tighter-dot">&nbsp;&nbsp;</span><b><i>&nbsp;&amp;</i></b></span
+    ><br />
+    <span
+        style="
+            display: inline-block;
+            font-family: &quot;EB Garamond&quot;;
+            text-shadow:
+                0.1px 0 currentColor,
+                -0.1px 0 currentColor,
+                0 0.1px currentColor,
+                0 -0.1px currentColor;
+            padding-top: 0em;
+            letter-spacing: 0.48em;
+            font-size: 3.6vw;
+        "
+        ><b>&nbsp;PLATFORM&nbsp;ENGINEER</b></span
+    ><br />
+    <span
+        style="
+            display: inline-block;
+            font-family: &quot;EB Garamond&quot;;
+            letter-spacing: 0.4em;
+            padding-top: 0.5em;
+            padding-bottom: 0em;
+            font-size: 2.6vw;
+        "
+        >&nbsp;VOL. Ⅰ</span
+    ><br />
+</p>
+<hr
+    style="
+        width: 50%;
+        height: 4px;
+        border-style: inset;
+        display: block;
+        background-color: #192021;
+        border: none;
+        border-top: 4px solid #e0d3af;
+    " />
+<br>

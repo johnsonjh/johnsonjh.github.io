@@ -3,7 +3,12 @@
 # Copyright (c) 2025 Jeffrey H. Johnson
 # SPDX-License-Identifier: MIT
 
-########################################################################
+################################################################################
+# Strict
+
+set -eu
+
+################################################################################
 # ShellCheck
 
 command -v shellcheck > /dev/null 2>&1 || {
@@ -15,19 +20,26 @@ command -v shellcheck > /dev/null 2>&1 && {
   shellcheck -o any,all build.sh
 } || true
 
-########################################################################
-# REUSE
+################################################################################
+# Build HTML
 
-# command -v reuse > /dev/null 2>&1 || {
-#   printf '%s\n' "⚠ reuse missing!" 2> /dev/null || true
-# } || true
+# index.html
+printf '%s\n' "• Build index.html …" 2> /dev/null || true
+TITLE="Illuminationes"
+cat top.template index.template bottom.template > index.html
+LATINDATE="$(cat index.template.date)"
+sed -i index.html -e "s/###LATINDATE###/${LATINDATE:?}/"
+sed -i index.html -e "s/###TITLE###/${TITLE:?}/"
 
-# command -v reuse > /dev/null 2>&1 && {
-#   printf '%s\n' "• REUSE …" 2> /dev/null || true
-#   reuse lint -q || reuse lint
-# } || true
+# test.html
+printf '%s\n' "• Build test.html …" 2> /dev/null || true
+TITLE="Test Page"
+cat top.template stars.template test.template bottom.template > test.html
+LATINDATE="$(cat test.template.date)"
+sed -i test.html -e "s/###LATINDATE###/${LATINDATE:?}/"
+sed -i test.html -e "s/###TITLE###/${TITLE:?}/"
 
-########################################################################
+################################################################################
 # Prettier
 
 command -v npx > /dev/null 2>&1 || {
@@ -44,9 +56,13 @@ command -v npx > /dev/null 2>&1 && {
     --tab-width 4        \
     --write \
 	housestyle.js \
+	test.html \
 	index.html
 } || true
 
-grep -n 'etc' ./*.html && {
-  printf '%s\n' "⚠ 'etc' should be '<small>%c</small>'"
+################################################################################
+# Grep
+
+grep -n 'etc\.' ./*.html && {
+  printf '%s\n' "⚠ 'etc.' should be '<small>%c</small>.'"
 } || true
