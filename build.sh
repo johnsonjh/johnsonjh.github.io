@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # shellcheck disable=SC2015
 # Copyright (c) 2025 Jeffrey H. Johnson
 # SPDX-License-Identifier: MIT
@@ -7,6 +7,16 @@
 # Strict
 
 set -eu
+
+################################################################################
+# Error trap
+
+error_report () {
+  printf '\n%s\n' "⚠ ERROR at line ${1:?}!"
+  exit 1
+}
+
+trap 'error_report ${LINENO:-0}' ERR INT
 
 ################################################################################
 # ShellCheck
@@ -27,6 +37,7 @@ command -v shellcheck > /dev/null 2>&1 && {
 printf '%s\n' "• Build index.html …" 2> /dev/null || true
 TITLE="Illuminationes"
 cat top.template index.template bottom.template > index.html
+latindate > index.template.date
 LATINDATE="$(cat index.template.date)"
 sed -i index.html -e "s/###LATINDATE###/${LATINDATE:?}/"
 sed -i index.html -e "s/###TITLE###/${TITLE:?}/"
@@ -66,3 +77,8 @@ command -v npx > /dev/null 2>&1 && {
 grep -n 'etc\.' ./*.html && {
   printf '%s\n' "⚠ 'etc.' should be '<small>%c</small>.'"
 } || true
+
+################################################################################
+# Done
+
+printf '%s\n' "✓ Success!" || true
