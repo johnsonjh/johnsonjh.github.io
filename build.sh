@@ -33,22 +33,36 @@ command -v shellcheck > /dev/null 2>&1 && {
 ################################################################################
 # Build HTML
 
+BASEURL="https://johnsonjh.github.io/"
+
 # index.html
 printf '%s\n' "• Build index.html …" 2> /dev/null || true
 TITLE="Illuminationes"
-cat top.template index.template bottom.template > index.html
+cat                 \
+    top.template    \
+    index.template  \
+    bottom.template \
+  > index.html
 latindate > index.template.date
 LATINDATE="$(cat index.template.date)"
 sed -i index.html -e "s/###LATINDATE###/${LATINDATE:?}/"
 sed -i index.html -e "s/###TITLE###/${TITLE:?}/"
+sed -i index.html -e "s%###BASEURL###%${BASEURL:?}%g"
 
 # test.html
 printf '%s\n' "• Build test.html …" 2> /dev/null || true
 TITLE="Test Page"
-cat top.template stars.template test.template bottom.template > test.html
+cat                    \
+    top.template       \
+    stars.template     \
+    test.template      \
+    signature.template \
+    bottom.template    \
+ > test.html
 LATINDATE="$(cat test.template.date)"
 sed -i test.html -e "s/###LATINDATE###/${LATINDATE:?}/"
 sed -i test.html -e "s/###TITLE###/${TITLE:?}/"
+sed -i test.html -e "s%###BASEURL###%${BASEURL:?}%g"
 
 ################################################################################
 # Prettier
@@ -65,9 +79,9 @@ command -v npx > /dev/null 2>&1 && {
     --no-bracket-spacing \
     --print-width 100    \
     --tab-width 4        \
-    --write \
-	housestyle.js \
-	test.html \
+    --write              \
+	housestyle.js    \
+	test.html        \
 	index.html
 } || true
 

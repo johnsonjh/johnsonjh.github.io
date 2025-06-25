@@ -337,6 +337,30 @@
             .tighter-dot {
                 letter-spacing: -0.1em;
             }
+
+            a {
+                color: inherit;
+                font-weight: inherit;
+                font-style: normal;
+                cursor: pointer;
+                text-decoration-line: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: #005500;
+            }
+
+            .dark-mode a {
+                color: inherit;
+                font-weight: inherit;
+                font-style: normal;
+                cursor: pointer;
+                text-decoration-line: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: red;
+            }
+
+            a:hover {
+                text-decoration-style: double;
+            }
         </style>
 
         <script>
@@ -384,7 +408,17 @@
                     letter-spacing: 0.4em;
                     white-space: nowrap;
                 "
-                >​ IlluminationeS</span
+                >​ <a
+                    href="https://johnsonjh.github.io/"
+                    style="
+                        color: inherit;
+                        text-decoration: none;
+                        font-weight: inherit;
+                        font-style: normal;
+                        cursor: pointer;
+                    "
+                    >IlluminationeS</a
+                ></span
             >
         </p>
         <hr
@@ -516,6 +550,8 @@
             18th 19th 20th.&nbsp;
         </p>
 
+        <p>This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.</p>
+
         <p>
             Amet, consectetur, adipisci velit, sed est non numquam eius modi tempora incidunt ut
             labore et dolore magnam aliquam quaerat voluptatem.&nbsp; Ut enim ad minima veniam, quis
@@ -525,7 +561,7 @@
             Julian
             <span style="white-space: nowrap">pariatur?<span class="symbola">&nbsp;⸎</span></span>
         </p>
-
+        <!-- vim: set expandtab ft=html : -->
         <p style="white-space: nowrap">
             <span
                 class="no-ligatures"

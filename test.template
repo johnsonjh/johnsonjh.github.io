@@ -101,6 +101,10 @@
         </p>
 
         <p>
+            This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.
+        </p>
+
+        <p>
             Amet, consectetur, adipisci velit, sed est non numquam eius modi tempora incidunt ut
             labore et dolore magnam aliquam quaerat voluptatem.&nbsp; Ut enim ad minima veniam, quis
             nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
@@ -108,22 +112,4 @@
             quam nihil molestiae consequatur, ezt illum qui dolorem eum fugiat quo voluptas nulla
             Julian
             <span style="white-space: nowrap">pariatur?<span class="symbola">&nbsp;⸎</span></span>
-        </p>
-
-        <p style="white-space: nowrap">
-            <span
-                class="no-ligatures"
-                style="font-family: Junicode; font-size: 70%; white-space: nowrap">
-                <span style="vertical-align: -0.085em; font-family: Symbola; font-size: 150%"
-                    >⅌&nbsp;</span
-                >Jeffrey&nbsp;H.&nbsp;Johnson</span
-            >&nbsp;<span
-                class="no-ligatures"
-                style="font-family: Typewriter; font-size: 60%; white-space: nowrap"
-                ><i>&lt;</i>trnsz<span
-                    class="no-ligatures"
-                    style="font-family: Typewriter; font-size: 75%; white-space: nowrap"
-                    >@</span
-                >pobox.com<i>&gt;</i></span
-            >
         </p>
