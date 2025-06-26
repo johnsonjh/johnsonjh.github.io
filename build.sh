@@ -35,7 +35,9 @@ command -v shellcheck > /dev/null 2>&1 && {
 
 BASEURL="https://johnsonjh.github.io/"
 
+###########################################################
 # index.html
+
 printf '%s\n' "• Build index.html …" 2> /dev/null || true
 TITLE="Illuminationes"
 cat                 \
@@ -49,7 +51,9 @@ sed -i index.html -e "s/###LATINDATE###/${LATINDATE:?}/"
 sed -i index.html -e "s/###TITLE###/${TITLE:?}/"
 sed -i index.html -e "s%###BASEURL###%${BASEURL:?}%g"
 
+###########################################################
 # test.html
+
 printf '%s\n' "• Build test.html …" 2> /dev/null || true
 TITLE="Test Page"
 cat                    \
@@ -93,6 +97,6 @@ grep -n 'etc\.' ./*.html && {
 } || true
 
 ################################################################################
-# Done
+# Finish
 
 printf '%s\n' "✓ Success!" || true
