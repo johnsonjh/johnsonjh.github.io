@@ -768,7 +768,6 @@
             (function () {
                 const debounceDelay = 50;
                 const reentryDelay = 25;
-                const bboxRetryDelay = 35;
 
                 let resizeTextObject;
                 let isProcessing = false;
@@ -799,7 +798,7 @@
                         const DPR = window.devicePixelRatio || 1;
 
                         if (!lineH || isNaN(lineH) || lineH < 1) {
-                            setTimeout(() => versify(el), bboxRetryDelay);
+                            requestAnimationFrame(() => versify(el));
                             return;
                         }
 
@@ -822,12 +821,6 @@
                         }
 
                         breaks.push(rawText.length);
-                        console.log(
-                            "breaks:",
-                            breaks,
-                            "segments:",
-                            breaks.map((b, i, arr) => rawText.slice(b, arr[i + 1])),
-                        );
                         el.innerHTML = "";
 
                         for (let j = 0; j < breaks.length - 1; j++) {
@@ -864,7 +857,9 @@
                 }
 
                 function processAllVerses() {
-                    document.querySelectorAll("blockquote.verse").forEach((el) => versify(el));
+                    requestAnimationFrame(() => {
+                        document.querySelectorAll("blockquote.verse").forEach((el) => versify(el));
+                    });
                 }
 
                 function redraw() {
