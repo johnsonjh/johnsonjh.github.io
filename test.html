@@ -812,12 +812,6 @@
                             range.setEnd(tempTextNode, i + 1);
 
                             const rect = range.getBoundingClientRect();
-
-                            if (!rect.height || rect.height === 0) {
-                                setTimeout(() => versify(el), bboxRetryDelay);
-                                return;
-                            }
-
                             const top = Math.round(rect.top * DPR) / DPR;
 
                             if (prevTop === null) {
