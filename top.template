@@ -49,7 +49,7 @@
             type="font/woff2"
             crossorigin="anonymous" />
 
-        <link rel="preload" href="bg.png" as="image" type="image/png" crossorigin="anonymous" />
+        <link rel="preload" href="bg.png" as="image" type="image/png" />
 
         <title>###TITLE###</title>
 
@@ -113,7 +113,10 @@
                 font-size: 1.35em;
                 font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "hist" 1, "hlig" 1, "liga" 1, "kern" 1;
                 margin: 4% 9% 0.2% 9%;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
                 text-align: justify;
+                text-wrap: pretty;
                 text-rendering: optimizeLegibility;
             }
 
@@ -215,14 +218,6 @@
                 padding-right: 2.3em;
             }
 
-            html,
-            body {
-                -webkit-text-size-adjust: none;
-                text-size-adjust: none;
-                z-index: 0;
-                position: relative;
-            }
-
             :root {
                 --bg-dark: #192021;
                 --bg-light: #e0d3af;
@@ -232,6 +227,10 @@
 
             html,
             body {
+                -webkit-text-size-adjust: none;
+                text-size-adjust: none;
+                z-index: 0;
+                position: relative;
                 background: var(--bg-light);
                 color: var(--text-light);
                 transition:
@@ -290,11 +289,6 @@
                 font-family: "Symbola";
             }
 
-            html {
-                -webkit-text-size-adjust: 100%;
-                -ms-text-size-adjust: 100%;
-            }
-
             blockquote.verse {
                 font-size: 90%;
                 font-style: italic;
@@ -305,6 +299,9 @@
                 position: relative;
                 right: -0.8em;
                 transform: translateZ(0);
+                text-align: left;
+                width: auto;
+                display: table;
             }
 
             .verse .vline {

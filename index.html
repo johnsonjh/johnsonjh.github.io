@@ -49,7 +49,7 @@
             type="font/woff2"
             crossorigin="anonymous" />
 
-        <link rel="preload" href="bg.png" as="image" type="image/png" crossorigin="anonymous" />
+        <link rel="preload" href="bg.png" as="image" type="image/png" />
 
         <title>Illuminationes</title>
 
@@ -120,7 +120,10 @@
                     "liga" 1,
                     "kern" 1;
                 margin: 4% 9% 0.2% 9%;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
                 text-align: justify;
+                text-wrap: pretty;
                 text-rendering: optimizeLegibility;
             }
 
@@ -228,14 +231,6 @@
                 padding-right: 2.3em;
             }
 
-            html,
-            body {
-                -webkit-text-size-adjust: none;
-                text-size-adjust: none;
-                z-index: 0;
-                position: relative;
-            }
-
             :root {
                 --bg-dark: #192021;
                 --bg-light: #e0d3af;
@@ -245,6 +240,10 @@
 
             html,
             body {
+                -webkit-text-size-adjust: none;
+                text-size-adjust: none;
+                z-index: 0;
+                position: relative;
                 background: var(--bg-light);
                 color: var(--text-light);
                 transition:
@@ -303,11 +302,6 @@
                 font-family: "Symbola";
             }
 
-            html {
-                -webkit-text-size-adjust: 100%;
-                -ms-text-size-adjust: 100%;
-            }
-
             blockquote.verse {
                 font-size: 90%;
                 font-style: italic;
@@ -318,6 +312,9 @@
                 position: relative;
                 right: -0.8em;
                 transform: translateZ(0);
+                text-align: left;
+                width: auto;
+                display: table;
             }
 
             .verse .vline {
@@ -1009,6 +1006,18 @@
 
                         breaks.push(rawText.length);
                         el.innerHTML = "";
+
+                        if (breaks.length <= 2) {
+                            console.log(JSON.stringify(breaks));
+                            el.textContent =
+                                "“" +
+                                rawText
+                                    .replace(/[\r\n]+/g, "")
+                                    .replace(/ {2,}/g, "")
+                                    .trim() +
+                                "”";
+                            return;
+                        }
 
                         for (let j = 0; j < breaks.length - 1; j++) {
                             const span = document.createElement("span");

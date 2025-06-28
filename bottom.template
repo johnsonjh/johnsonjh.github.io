@@ -229,6 +229,12 @@
                         breaks.push(rawText.length);
                         el.innerHTML = "";
 
+                        if (breaks.length <= 2) {
+                            console.log(JSON.stringify(breaks));
+                            el.textContent = '“' + rawText.replace(/[\r\n]+/g, '').replace(/ {2,}/g, '').trim() + '”';
+                            return;
+                        }
+
                         for (let j = 0; j < breaks.length - 1; j++) {
                             const span = document.createElement("span");
                             span.className = "vline";
