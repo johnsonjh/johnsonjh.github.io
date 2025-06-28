@@ -1009,6 +1009,12 @@
                         }
 
                         breaks.push(rawText.length);
+                        console.log(
+                            "breaks:",
+                            breaks,
+                            "segments:",
+                            breaks.map((b, i, arr) => rawText.slice(b, arr[i + 1])),
+                        );
                         el.innerHTML = "";
 
                         for (let j = 0; j < breaks.length - 1; j++) {
