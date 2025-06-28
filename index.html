@@ -42,6 +42,13 @@
             type="font/woff2"
             crossorigin="anonymous" />
 
+        <link
+            rel="preload"
+            href="FetteUNZFraktur.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous" />
+
         <link rel="preload" href="bg.png" as="image" type="image/png" crossorigin="anonymous" />
 
         <title>Illuminationes</title>
@@ -84,6 +91,13 @@
                 font-style: normal;
                 font-weight: 400;
                 src: url("Typewriter.woff2") format("woff2");
+            }
+
+            @font-face {
+                font-family: "Fette";
+                font-style: normal;
+                font-weight: 400;
+                src: url("FetteUNZFraktur.woff2") format("woff2");
             }
 
             @font-face {
@@ -604,7 +618,7 @@
                 padding: 0px 0px;
                 border-radius: 4px;
                 position: absolute;
-                bottom: 110%;
+                bottom: 101%;
                 left: 50%;
                 line-height: 100%;
                 transform: translateX(-55%);
@@ -612,9 +626,9 @@
                 z-index: 1;
                 opacity: 0;
                 transition: opacity 0.3s;
-                font-family: "EB Garamond";
+                font-family: "Fette";
                 letter-spacing: 0.09em;
-                font-size: 1em;
+                font-size: 1.2em;
                 font-weight: bold;
                 color: #10172e;
                 background-color: transparent;
@@ -785,7 +799,7 @@
                     font-size: 75%;
                     font-feature-settings: "smcp" 1;
                 '>
-                ultimum·​recognitum·​est·​ante·​diem·​Ⅵ·​kalendas·​iulias·​anno·​domini·​ⅯⅯⅩⅩⅤ
+                ultimum·​recognitum·​est·​ante·​diem·​Ⅳ·​kalendas·​iulias·​anno·​domini·​ⅯⅯⅩⅩⅤ
             </span>
         </p>
         <hr
