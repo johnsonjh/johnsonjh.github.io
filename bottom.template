@@ -103,7 +103,7 @@
 
                 document.body.style.visibility = "visible";
 
-                async function animateParagraphs(paragraphs, sConversionDelay = 20) {
+                async function animateParagraphs(paragraphs, sConversionDelay = 10) {
                     for (const p of paragraphs) {
                         const charSpans = p.querySelectorAll(".char");
 

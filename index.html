@@ -127,9 +127,24 @@
                 text-rendering: optimizeLegibility;
             }
 
-            @media (max-width: 600px) {
+            @media (max-width: 700px) {
                 body {
                     font-size: 0.8em;
+                }
+            }
+
+            .columns-section {
+                column-count: 2;
+                column-gap: 2em;
+                padding: 1em;
+                text-align: justify;
+                text-wrap: balance;
+                text-wrap: pretty;
+            }
+
+            @media (max-width: 800px) {
+                .columns-section {
+                    column-count: 1;
                 }
             }
 
@@ -881,7 +896,7 @@
 
                 document.body.style.visibility = "visible";
 
-                async function animateParagraphs(paragraphs, sConversionDelay = 20) {
+                async function animateParagraphs(paragraphs, sConversionDelay = 10) {
                     for (const p of paragraphs) {
                         const charSpans = p.querySelectorAll(".char");
 

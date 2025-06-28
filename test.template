@@ -100,6 +100,60 @@
             15th 16th 17th 18th 19th 20th.&nbsp;
         </p>
 
+          <section class="columns-section">
+    <h3>Multi-Column Example</h3>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros.</p>
+
+    <p>Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+
+        <blockquote class="verse">
+            When you are old and grey and full of sleep and nodding by the fire, Take
+            down this book, and slowly read, and dream of the soft look Your eyes had
+            once, and of their shadows deep;&nbsp; How many loved your moments of glad
+            grace, And loved your beauty with love false or true, but one man loved
+            the pilgrim soul in you.&nbsp;
+        </blockquote>
+
+        <p>
+    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.</p>
+
+        <ol>
+            <li><p>Beware of all whoredom, my son, and chiefly take a wife of the seed of thy fathers, and take not a strange woman to wife, which is not of thy father’s tribe: for we are the children of the prophets, Noe, Abraham, Isaac, and Jacob: remember, my son, that our fathers from the beginning, even that they all married wives of their own kindred, and were blessed in their children, and their seed shall inherit the land.</p></li>
+            <li><p>Now therefore, my son, love thy brethren, and despise not in thy heart thy brethren, the sons and daughters of thy people, in not taking a wife of them: for in pride is destruction and much trouble, and in lewdness is decay and great want: for lewdness is the mother of famine.</p></li>
+            <li><p>Let not the wages of any man, which hath wrought for thee, tarry with thee, but give him it out of hand: for if thou serve God, he will also repay thee: be circumspect, my son, in all things thou doest, and be wise in all thy conversation.</p></li>
+        </ol>
+
+        <p>Ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.</p> <p>Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+
+        <blockquote class="verse">
+            April is the cruellest month, breeding
+            Lilacs out of the dead land, mixing
+            Memory and desire, stirring
+            Dull roots with spring rain.
+            Winter kept us warm, covering
+            Earth in forgetful snow, feeding
+            A little life with dried tubers.
+            Summer surprised us, coming over the Starnbergersee
+            With a shower of rain; we stopped in the colonnade,
+            And went on in sunlight, into the Hofgarten,
+            And drank coffee, and talked for an hour.
+            Bin gar keine Russin, stamm’ aus Litauen, echt deutsch.
+            And when we were children, staying at the archduke’s,
+            My cousin’s, he took me out on a sled,
+            And I was frightened. He said, Marie,
+            Marie, hold on tight. And down we went.
+            In the mountains, there you feel free.
+            I read, much of the night, and go south in the winter.
+        </blockquote>
+
+        <p>Tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.
+    </p>
+    <!-- Add more paragraphs as needed for very long text -->
+  </section>
+
         <p>
             This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.
         </p>
