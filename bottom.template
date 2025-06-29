@@ -231,6 +231,10 @@
                     isProcessing = true;
 
                     try {
+                        const rect = el.getBoundingClientRect();
+                        el.style.minWidth = rect.width + "px";
+                        el.style.minHeight = rect.height + "px";
+                        el.style.boxSizing = "border-box";
                         const rawText = el.dataset.raw || el.textContent;
 
                         if (!el.dataset.raw) {
@@ -275,7 +279,14 @@
 
                         if (breaks.length <= 2) {
                             console.log(JSON.stringify(breaks));
-                            el.textContent = '“' + rawText.replace(/[\r\n]+/g, '').replace(/ {2,}/g, '').trim() + '”';
+                            //el.textContent = '“' + rawText.replace(/[\r\n]+/g, '').replace(/ {2,}/g, '').trim() + '”';
+                            //return;
+                            el.innerHTML =
+                                '<span class="vline">' +
+                                rawText
+                                    .replace(/ {2,}/g, "")
+                                    .trim() +
+                                '”</span>';
                             return;
                         }
 
@@ -308,6 +319,10 @@
                             el.appendChild(span);
                         }
                     } finally {
+                        setTimeout(() => {
+                            el.style.minWidth = "";
+                            el.style.minHeight = "";
+                        }, 0);
                         isProcessing = false;
                     }
                 }
@@ -345,6 +360,27 @@
                         redraw();
                     }
                 }, 256);
+
+                function isSafari() {
+                  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                }
+
+                function debounce(func, wait) {
+                  let timeout;
+                  return function(...args) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                  };
+                }
+
+                if (isSafari()) {
+                  window.addEventListener('scroll', debounce(function() {
+                    if (typeof redraw === 'function') {
+                      redraw();
+                    }
+                  }, 250));
+                }
+
             })();
         </script>
         <script src="housestyle.js"></script>

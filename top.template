@@ -333,8 +333,7 @@
             .verse .vline {
                 display: block;
                 position: relative;
-                text-align: justify;
-                /*white-space: nowrap;*/
+                text-align: left;
             }
 
             .verse .vline::before {
