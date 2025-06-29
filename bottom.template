@@ -102,7 +102,7 @@
                 wrapChars(document.body);
 
                 document.body.style.visibility = "visible";
-/*
+
                 async function animateParagraphs(paragraphs, batchSize = 16) {
                     for (const p of paragraphs) {
                         const charSpans = Array.from(p.querySelectorAll(".char"));
@@ -122,46 +122,6 @@
                             }
                         }
                         insideAnimateBatch();
-                    }
-                }*/
-                /*
-                function fadeOutIn(span) {
-                    span.classList.add("fading");
-
-                    setTimeout(() => {
-                        span.classList.remove("pending-transform", "fading");
-                        span.classList.add("transformed");
-                    }, 505);
-                }
-
-                async function animateParagraphs(paragraphs) {
-                    for (const p of paragraphs) {
-                        const charSpans = p.querySelectorAll(".char");
-
-                        for (const span of charSpans) {
-                            span.classList.add("visible");
-                            if (span.classList.contains("pending-transform")) {
-                                fadeOutIn(span);
-                            }
-                        }
-                    }
-                }*/
-                async function animateParagraphs(paragraphs, fadeDuration = 200, stagger = 5) {
-                    for (const p of paragraphs) {
-                        const spans = p.querySelectorAll('.char.pending-transform');
-
-                        spans.forEach(span => {
-                            span.classList.add('fading');
-                        });
-
-                        await new Promise(resolve => setTimeout(resolve, fadeDuration));
-
-                        spans.forEach(span => {
-                            span.classList.remove('pending-transform', 'fading');
-                            span.classList.add('transformed');
-                        });
-
-                        await new Promise(resolve => setTimeout(resolve, stagger));
                     }
                 }
 
@@ -278,9 +238,6 @@
                         el.innerHTML = "";
 
                         if (breaks.length <= 2) {
-                            console.log(JSON.stringify(breaks));
-                            //el.textContent = '“' + rawText.replace(/[\r\n]+/g, '').replace(/ {2,}/g, '').trim() + '”';
-                            //return;
                             el.innerHTML =
                                 '<span class="vline">' +
                                 rawText
@@ -380,6 +337,40 @@
                     }
                   }, 250));
                 }
+
+
+
+                if (typeof processAllVerses === "function") processAllVerses();
+                if (typeof redraw === "function") redraw();
+
+                function showBoundingBoxes() {
+                    document.querySelectorAll('.columns-section').forEach(section => {
+                        section.style.outline = '3px solid red';
+
+                        section.querySelectorAll('blockquote.verse').forEach((bq,i) => {
+                            bq.style.outline = '2px dashed blue';
+                            bq.style.position = 'relative';
+
+                            let existingLabel = bq.querySelector('.bbox-label');
+                            if (existingLabel) existingLabel.remove();
+
+                            let rect = bq.getBoundingClientRect();
+                            let label = document.createElement('div');
+                            label.className = 'bbox-label';
+                            label.style.position = 'absolute';
+                            label.style.top = '0';
+                            label.style.left = '0';
+                            label.style.background = 'rgba(255,255,0,0.7)';
+                            label.style.fontSize = '12px';
+                            label.style.zIndex = 99;
+                            label.style.pointerEvents = 'none';
+                            label.textContent = `#${i+1}: left:${rect.left.toFixed(0)} right:${rect.right.toFixed(0)}`;
+                            bq.appendChild(label);
+                        });
+                    });
+                }
+
+                /* showBoundingBoxes(); */
 
             })();
         </script>

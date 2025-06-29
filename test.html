@@ -111,7 +111,14 @@
                 font-family: "EB Garamond";
                 font-kerning: normal;
                 font-size: 1.25em;
-                font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "hist" 1, "hlig" 1, "liga" 1, "kern" 1;
+                font-feature-settings:
+                    "calt" 1,
+                    "clig" 1,
+                    "dlig" 1,
+                    "hist" 1,
+                    "hlig" 1,
+                    "liga" 1,
+                    "kern" 1;
                 margin: 4% 9% 0.2% 9%;
                 -webkit-text-size-adjust: 100%;
                 -ms-text-size-adjust: 100%;
@@ -146,7 +153,6 @@
                 font-weight: bold;
                 unicode-bidi: isolate;
                 white-space: nowrap;
-                transition: opacity 0.3s, color 0.3s;
                 opacity: 1;
             }
 
@@ -160,7 +166,6 @@
                 white-space: nowrap;
                 display: contents;
                 color: inherit;
-                transition: opacity 0.3s, color 0.3s;
                 opacity: 1;
             }
 
@@ -195,7 +200,13 @@
 
             span.no-ligatures {
                 text-align: start;
-                font-feature-settings: "calt" 0, "clig" 0, "dlig" 0, "hist" 0, "hlig" 0, "liga" 0;
+                font-feature-settings:
+                    "calt" 0,
+                    "clig" 0,
+                    "dlig" 0,
+                    "hist" 0,
+                    "hlig" 0,
+                    "liga" 0;
             }
 
             ol {
@@ -349,6 +360,20 @@
                 position: relative;
             }
 
+            blockquote.verse.justify-right {
+                text-align: right !important;
+            }
+
+            blockquote.verse.justify-right,
+            blockquote.verse.justify-right * {
+                text-align: right !important;
+                display: block;
+            }
+
+            blockquote.verse.justify-right::before {
+                content: none !important;
+            }
+
             blockquote {
                 font-feature-settings: "hlig" 0;
             }
@@ -388,10 +413,6 @@
             a:hover {
                 text-decoration-style: double;
             }
-
-
-
-
         </style>
 
         <script>
@@ -439,7 +460,17 @@
                     letter-spacing: 0.4em;
                     white-space: nowrap;
                 "
-                >​ <a href="https://johnsonjh.github.io/" style="color: inherit; text-decoration: none; font-weight: inherit; font-style: normal; cursor: pointer">IlluminationeS</a></span
+                >​ <a
+                    href="https://johnsonjh.github.io/"
+                    style="
+                        color: inherit;
+                        text-decoration: none;
+                        font-weight: inherit;
+                        font-style: normal;
+                        cursor: pointer;
+                    "
+                    >IlluminationeS</a
+                ></span
             >
         </p>
         <hr
@@ -455,11 +486,12 @@
 
         <p style="text-wrap: balance; max-width: 90vw; text-align: center">
             <i
-                ><span style="font-size: 120%; font-feature-settings: 'swsh' 1;">S</span>e<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
+                ><span style="font-size: 120%; font-feature-settings: &quot;swsh&quot; 1">S</span
+                >e<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
                 Commentarii Collecti…</i
             >
         </p>
-<!-- vim: set expandtab ft=html : -->
+        <!-- vim: set expandtab ft=html : -->
         <p class="title" style="text-align: center">
             <br /><span style="font-family: Junicode; font-size: 130%"
                 ><sub>*</sub
@@ -468,7 +500,7 @@
                 ></span
             >
         </p>
-<!-- vim: set expandtab ft=html : -->
+        <!-- vim: set expandtab ft=html : -->
         <p>
             The fictitious affluent coffee sufficient official different office Thistle Thames staff
             acta select skies standard cctt sstt FFI ffi ffl.&nbsp;
@@ -546,11 +578,10 @@
         </p>
 
         <blockquote class="verse">
-            When you are old and grey and full of sleep and nodding by the fire, Take
-            down this book, and slowly read, and dream of the soft look Your eyes had
-            once, and of their shadows deep;&nbsp; How many loved your moments of glad
-            grace, And loved your beauty with love false or true, but one man loved
-            the pilgrim soul in you.&nbsp;
+            When you are old and grey and full of sleep and nodding by the fire, Take down this
+            book, and slowly read, and dream of the soft look Your eyes had once, and of their
+            shadows deep;&nbsp; How many loved your moments of glad grace, And loved your beauty
+            with love false or true, but one man loved the pilgrim soul in you.&nbsp;
         </blockquote>
 
         <p>
@@ -566,114 +597,169 @@
         </p>
 
         <p>
-            Numbers: 1st 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th
-            15th 16th 17th 18th 19th 20th.&nbsp;
+            Numbers: 1st 2nd 3rd 4th 5th 6th 7th 8th 9th 10th 11th 12th 13th 14th 15th 16th 17th
+            18th 19th 20th.&nbsp;
         </p>
 
-          <section class="columns-section">
-    <h3>Multi-Column Example</h3>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros.</p>
+        <section class="columns-section">
+            <h3>Multi-Column Example</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi.
+                Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum
+                nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi,
+                nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris
+                enim lacinia lacus, eu tincidunt dui velit ac eros.
+            </p>
 
-    <p>Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+            <p>
+                Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim
+                eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante
+                ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam
+                iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna
+                eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae
+                elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non
+                sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus
+                dictum, viverra urna sed, sodales tellus.
+            </p>
 
-        <blockquote class="verse">
-            When you are old and grey and full of sleep and nodding by the fire, Take
-            down this book, and slowly read, and dream of the soft look Your eyes had
-            once, and of their shadows deep;&nbsp; How many loved your moments of glad
-            grace, And loved your beauty with love false or true, but one man loved
-            the pilgrim soul in you.&nbsp;
-        </blockquote>
+            <blockquote class="verse">
+                When you are old and grey and full of sleep and nodding by the fire, Take down this
+                book, and slowly read, and dream of the soft look Your eyes had once, and of their
+                shadows deep;&nbsp; How many loved your moments of glad grace, And loved your beauty
+                with love false or true, but one man loved the pilgrim soul in you.&nbsp;
+            </blockquote>
 
-        <p>
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.</p>
+            <p>
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec
+                luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio
+                cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque
+                dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat
+                ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu
+                consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae
+                cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at.
+                Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec
+                convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem.
+                Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis
+                nisi nulla at augue.
+            </p>
 
-        <ul>
-            <li>
-                <p class="tight">
-                <span><i>Beware</i> of all whoredom, my son, and chiefly take a wife of the seed of thy fathers, and take not a strange woman to wife, which is not of thy father’s tribe: for we are the children of the prophets, Noe, Abraham, Isaac, and Jacob: remember, my son, that our fathers from the beginning, even that they all married wives of their own kindred, and were blessed in their children, and their seed shall inherit the land.&nbsp;<br><br></span>
-                </p>
-            </li>
-            <li>
-                <p class="tight">
-                    <span
-                        ><i>Now</i> therefore, my son, love thy brethren, and despise not in thy heart thy brethren, the sons and daughters of thy people, in not taking a wife of them: for in pride is destruction and much trouble, and in lewdness is decay and great want: for lewdness is the mother of famine..&nbsp;<br><br></span
-                    >
-                </p>
-            </li>
-            <li>
-                <p class="tight">
-                    <span>Let not the wages of any man, which hath wrought for thee, tarry with thee, but give him it out of hand: for if thou serve God, he will also repay thee: be circumspect, my son, in all things thou doest, and be wise in all thy conversation.&nbsp;</span>
-                </p>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <p class="tight">
+                        <span
+                            ><i>Beware</i> of all whoredom, my son, and chiefly take a wife of the
+                            seed of thy fathers, and take not a strange woman to wife, which is not
+                            of thy father’s tribe: for we are the children of the prophets, Noe,
+                            Abraham, Isaac, and Jacob: remember, my son, that our fathers from the
+                            beginning, even that they all married wives of their own kindred, and
+                            were blessed in their children, and their seed shall inherit the
+                            land.&nbsp;<br /><br
+                        /></span>
+                    </p>
+                </li>
+                <li>
+                    <p class="tight">
+                        <span
+                            ><i>Now</i> therefore, my son, love thy brethren, and despise not in thy
+                            heart thy brethren, the sons and daughters of thy people, in not taking
+                            a wife of them: for in pride is destruction and much trouble, and in
+                            lewdness is decay and great want: for lewdness is the mother of
+                            famine..&nbsp;<br /><br
+                        /></span>
+                    </p>
+                </li>
+                <li>
+                    <p class="tight">
+                        <span
+                            >Let not the wages of any man, which hath wrought for thee, tarry with
+                            thee, but give him it out of hand: for if thou serve God, he will also
+                            repay thee: be circumspect, my son, in all things thou doest, and be
+                            wise in all thy conversation.&nbsp;</span
+                        >
+                    </p>
+                </li>
+            </ul>
 
-        <p>Ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+            <p>
+                Ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi.
+                Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum
+                nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi,
+                nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris
+                enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus
+                posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna.
+                Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget
+                hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.
+                Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros
+                volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim
+                tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra
+                urna sed, sodales tellus.
+            </p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.</p> <p>Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi.
+                Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum
+                nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi,
+                nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris
+                enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus
+                posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna.
+                Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget
+                hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.
+            </p>
+            <p>
+                Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros
+                volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim
+                tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra
+                urna sed, sodales tellus.
+            </p>
 
-        <blockquote class="verse">
-            April is the cruellest month, breeding
-        </blockquote>
-        <blockquote class="verse">
-            Lilacs out of the dead land, mixing
-        </blockquote>
-        <blockquote class="verse">
-            Memory and desire, stirring
-        </blockquote>
-        <blockquote class="verse">
-            Dull roots with spring rain.
-        </blockquote>
-        <blockquote class="verse">
-            Winter kept us warm, covering
-        </blockquote>
-        <blockquote class="verse">
-            Earth in forgetful snow, feeding
-        </blockquote>
-        <blockquote class="verse">
-            A little life with dried tubers.
-        </blockquote>
-        <blockquote class="verse">
-            Summer surprised us, coming over the Starnbergersee
-        </blockquote>
-        <blockquote class="verse">
-            With a shower of rain; we stopped in the colonnade,
-        </blockquote>
-        <blockquote class="verse">
-            And went on in sunlight, into the Hofgarten,
-        </blockquote>
-        <blockquote class="verse">
-            And drank coffee, and talked for an hour.
-        </blockquote>
-        <blockquote class="verse">
-            Bin gar keine Russin, stamm’ aus Litauen, echt deutsch.
-        </blockquote>
-        <blockquote class="verse">
-            And when we were children, staying at the archduke’s,
-        </blockquote>
-        <blockquote class="verse">
-            My cousin’s, he took me out on a sled,
-        </blockquote>
-        <blockquote class="verse">
-            And I was frightened. He said, Marie,
-        </blockquote>
-        <blockquote class="verse">
-            Marie, hold on tight. And down we went.
-        </blockquote>
-        <blockquote class="verse">
-            In the mountains, there you feel free.
-        </blockquote>
-        <blockquote class="verse">
-            I read, much of the night, and go south in the winter.
-        </blockquote>
+            <blockquote class="verse">April is the cruellest month, breeding</blockquote>
+            <blockquote class="verse">Lilacs out of the dead land, mixing</blockquote>
+            <blockquote class="verse">Memory and desire, stirring</blockquote>
+            <blockquote class="verse">Dull roots with spring rain.</blockquote>
+            <blockquote class="verse">Winter kept us warm, covering</blockquote>
+            <blockquote class="verse">Earth in forgetful snow, feeding</blockquote>
+            <blockquote class="verse">A little life with dried tubers.</blockquote>
+            <blockquote class="verse">
+                Summer surprised us, coming over the Starnbergersee
+            </blockquote>
+            <blockquote class="verse">
+                With a shower of rain; we stopped in the colonnade,
+            </blockquote>
+            <blockquote class="verse">And went on in sunlight, into the Hofgarten,</blockquote>
+            <blockquote class="verse">And drank coffee, and talked for an hour.</blockquote>
+            <blockquote class="verse">
+                Bin gar keine Russin, stamm’ aus Litauen, echt deutsch.
+            </blockquote>
+            <blockquote class="verse">
+                And when we were children, staying at the archduke’s,
+            </blockquote>
+            <blockquote class="verse">My cousin’s, he took me out on a sled,</blockquote>
+            <blockquote class="verse">And I was frightened. He said, Marie,</blockquote>
+            <blockquote class="verse">Marie, hold on tight. And down we went.</blockquote>
+            <blockquote class="verse">In the mountains, there you feel free.</blockquote>
+            <blockquote class="verse">
+                I read, much of the night, and go south in the winter.
+            </blockquote>
 
-        <p>Tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.
-    </p>
-          </section>
+            <p>
+                Tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium,
+                metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui.
+                Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat
+                velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh
+                tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit,
+                mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at
+                nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer
+                molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris,
+                et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue
+                tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra,
+                dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.
+            </p>
+        </section>
 
-        <p>
-            This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.
-        </p>
+        <p>This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.</p>
 
         <p>
             Amet, consectetur, adipisci velit, sed est non numquam eius modi tempora incidunt ut
@@ -684,7 +770,7 @@
             Julian
             <span style="white-space: nowrap">pariatur?<span class="symbola">&nbsp;⸎</span></span>
         </p>
-<!-- vim: set expandtab ft=html : -->
+        <!-- vim: set expandtab ft=html : -->
         <p style="white-space: nowrap">
             <span
                 class="no-ligatures"
@@ -702,7 +788,7 @@
                 >pobox.com<i>&gt;</i></span
             >
         </p>
-<!-- vim: set expandtab ft=html : -->
+        <!-- vim: set expandtab ft=html : -->
         <hr
             style="
                 width: 100%;
@@ -806,7 +892,7 @@
                 wrapChars(document.body);
 
                 document.body.style.visibility = "visible";
-/*
+
                 async function animateParagraphs(paragraphs, batchSize = 16) {
                     for (const p of paragraphs) {
                         const charSpans = Array.from(p.querySelectorAll(".char"));
@@ -826,46 +912,6 @@
                             }
                         }
                         insideAnimateBatch();
-                    }
-                }*/
-                /*
-                function fadeOutIn(span) {
-                    span.classList.add("fading");
-
-                    setTimeout(() => {
-                        span.classList.remove("pending-transform", "fading");
-                        span.classList.add("transformed");
-                    }, 505);
-                }
-
-                async function animateParagraphs(paragraphs) {
-                    for (const p of paragraphs) {
-                        const charSpans = p.querySelectorAll(".char");
-
-                        for (const span of charSpans) {
-                            span.classList.add("visible");
-                            if (span.classList.contains("pending-transform")) {
-                                fadeOutIn(span);
-                            }
-                        }
-                    }
-                }*/
-                async function animateParagraphs(paragraphs, fadeDuration = 200, stagger = 5) {
-                    for (const p of paragraphs) {
-                        const spans = p.querySelectorAll('.char.pending-transform');
-
-                        spans.forEach(span => {
-                            span.classList.add('fading');
-                        });
-
-                        await new Promise(resolve => setTimeout(resolve, fadeDuration));
-
-                        spans.forEach(span => {
-                            span.classList.remove('pending-transform', 'fading');
-                            span.classList.add('transformed');
-                        });
-
-                        await new Promise(resolve => setTimeout(resolve, stagger));
                     }
                 }
 
@@ -982,15 +1028,10 @@
                         el.innerHTML = "";
 
                         if (breaks.length <= 2) {
-                            console.log(JSON.stringify(breaks));
-                            //el.textContent = '“' + rawText.replace(/[\r\n]+/g, '').replace(/ {2,}/g, '').trim() + '”';
-                            //return;
                             el.innerHTML =
                                 '<span class="vline">' +
-                                rawText
-                                    .replace(/ {2,}/g, "")
-                                    .trim() +
-                                '”</span>';
+                                rawText.replace(/ {2,}/g, "").trim() +
+                                "”</span>";
                             return;
                         }
 
@@ -1066,25 +1107,59 @@
                 }, 256);
 
                 function isSafari() {
-                  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
                 }
 
                 function debounce(func, wait) {
-                  let timeout;
-                  return function(...args) {
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => func.apply(this, args), wait);
-                  };
+                    let timeout;
+                    return function (...args) {
+                        clearTimeout(timeout);
+                        timeout = setTimeout(() => func.apply(this, args), wait);
+                    };
                 }
 
                 if (isSafari()) {
-                  window.addEventListener('scroll', debounce(function() {
-                    if (typeof redraw === 'function') {
-                      redraw();
-                    }
-                  }, 250));
+                    window.addEventListener(
+                        "scroll",
+                        debounce(function () {
+                            if (typeof redraw === "function") {
+                                redraw();
+                            }
+                        }, 250),
+                    );
                 }
 
+                if (typeof processAllVerses === "function") processAllVerses();
+                if (typeof redraw === "function") redraw();
+
+                function showBoundingBoxes() {
+                    document.querySelectorAll(".columns-section").forEach((section) => {
+                        section.style.outline = "3px solid red";
+
+                        section.querySelectorAll("blockquote.verse").forEach((bq, i) => {
+                            bq.style.outline = "2px dashed blue";
+                            bq.style.position = "relative";
+
+                            let existingLabel = bq.querySelector(".bbox-label");
+                            if (existingLabel) existingLabel.remove();
+
+                            let rect = bq.getBoundingClientRect();
+                            let label = document.createElement("div");
+                            label.className = "bbox-label";
+                            label.style.position = "absolute";
+                            label.style.top = "0";
+                            label.style.left = "0";
+                            label.style.background = "rgba(255,255,0,0.7)";
+                            label.style.fontSize = "12px";
+                            label.style.zIndex = 99;
+                            label.style.pointerEvents = "none";
+                            label.textContent = `#${i + 1}: left:${rect.left.toFixed(0)} right:${rect.right.toFixed(0)}`;
+                            bq.appendChild(label);
+                        });
+                    });
+                }
+
+                /* showBoundingBoxes(); */
             })();
         </script>
         <script src="housestyle.js"></script>

@@ -146,7 +146,6 @@
                 font-weight: bold;
                 unicode-bidi: isolate;
                 white-space: nowrap;
-                transition: opacity 0.3s, color 0.3s;
                 opacity: 1;
             }
 
@@ -160,7 +159,6 @@
                 white-space: nowrap;
                 display: contents;
                 color: inherit;
-                transition: opacity 0.3s, color 0.3s;
                 opacity: 1;
             }
 
@@ -347,6 +345,20 @@
 
             .verse .vline .closer {
                 position: relative;
+            }
+
+            blockquote.verse.justify-right {
+                text-align: right !important;
+            }
+
+            blockquote.verse.justify-right,
+            blockquote.verse.justify-right * {
+                text-align: right !important;
+                display: block;
+            }
+
+            blockquote.verse.justify-right::before {
+              content: none !important;
             }
 
             blockquote {
