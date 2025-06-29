@@ -134,17 +134,12 @@
                 font-size: 95%;
             }
 
-            .columns-container > * {
-                -webkit-column-break-inside: avoid;
-                break-inside: avoid;
-            }
-
             .columns-container {
                 overflow: auto;
                 padding-bottom: 4em;
             }
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1000px) {
                 body {
                     font-size: 95%;
                 }
@@ -348,13 +343,15 @@
                 text-align: justify;
                 width: auto;
                 display: table;
+                break-inside: avoid-column;
+                -webkit-column-break-inside: avoid;
             }
 
             .verse .vline {
                 display: block;
                 position: relative;
                 text-align: justify;
-                white-space: nowrap;
+                /*white-space: nowrap;*/
             }
 
             .verse .vline::before {
@@ -650,8 +647,8 @@
                             Abraham, Isaac, and Jacob: remember, my son, that our fathers from the
                             beginning, even that they all married wives of their own kindred, and
                             were blessed in their children, and their seed shall inherit the
-                            land.&nbsp;</span
-                        >
+                            land.&nbsp;<br /><br
+                        /></span>
                     </p>
                 </li>
                 <li>
@@ -661,8 +658,8 @@
                             heart thy brethren, the sons and daughters of thy people, in not taking
                             a wife of them: for in pride is destruction and much trouble, and in
                             lewdness is decay and great want: for lewdness is the mother of
-                            famine..&nbsp;</span
-                        >
+                            famine..&nbsp;<br /><br
+                        /></span>
                     </p>
                 </li>
                 <li>
@@ -692,9 +689,7 @@
                 tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra
                 urna sed, sodales tellus.
             </p>
-        </section>
 
-        <section class="columns-section">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi.
                 Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum
@@ -1101,9 +1096,17 @@
                     resizeTextObject = setTimeout(processAllVerses, debounceDelay);
                 }
 
-                window.addEventListener("load", processAllVerses);
+                window.addEventListener("load", () => {
+                    setTimeout(processAllVerses, 150);
+                });
                 window.addEventListener("resize", redraw);
-                window.addEventListener("orientationchange", redraw);
+                window.addEventListener("visualViewport.resize", redraw);
+                window.addEventListener("focus", redraw);
+                window.addEventListener("blur", redraw);
+                window.addEventListener("pageshow", redraw);
+                window.addEventListener("orientationchange", () => {
+                    setTimeout(redraw, 500);
+                });
 
                 let lastScale = window.visualViewport?.scale || 1;
 
@@ -1114,7 +1117,7 @@
                         lastScale = currentScale;
                         redraw();
                     }
-                }, 250);
+                }, 256);
             })();
         </script>
         <script src="housestyle.js"></script>

@@ -127,17 +127,12 @@
                 font-size: 95%;
             }
 
-            .columns-container > * {
-                -webkit-column-break-inside: avoid;
-                break-inside: avoid;
-            }
-
             .columns-container {
                 overflow: auto;
                 padding-bottom: 4em;
             }
 
-            @media (max-width: 1280px) {
+            @media (max-width: 1000px) {
                 body {
                     font-size: 95%;
                 }
@@ -331,13 +326,15 @@
                 text-align: justify;
                 width: auto;
                 display: table;
+                break-inside: avoid-column;
+                -webkit-column-break-inside: avoid;
             }
 
             .verse .vline {
                 display: block;
                 position: relative;
                 text-align: justify;
-                white-space: nowrap;
+                /*white-space: nowrap;*/
             }
 
             .verse .vline::before {

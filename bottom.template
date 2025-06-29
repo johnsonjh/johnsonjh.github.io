@@ -323,9 +323,17 @@
                     resizeTextObject = setTimeout(processAllVerses, debounceDelay);
                 }
 
-                window.addEventListener("load", processAllVerses);
+                window.addEventListener("load", () => {
+                    setTimeout(processAllVerses, 150);
+                });
                 window.addEventListener("resize", redraw);
-                window.addEventListener("orientationchange", redraw);
+                window.addEventListener("visualViewport.resize", redraw);
+                window.addEventListener("focus", redraw);
+                window.addEventListener("blur", redraw);
+                window.addEventListener("pageshow", redraw);
+                window.addEventListener("orientationchange", () => {
+                    setTimeout(redraw, 500);
+                });
 
                 let lastScale = window.visualViewport?.scale || 1;
 
@@ -336,7 +344,7 @@
                         lastScale = currentScale;
                         redraw();
                     }
-                }, 250);
+                }, 256);
             })();
         </script>
         <script src="housestyle.js"></script>
