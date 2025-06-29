@@ -42,7 +42,7 @@ function layOutGutterQuotes() {
     const st = getComputedStyle(block);
     const lh = parseFloat(st.lineHeight);
     const fs = parseFloat(st.fontSize);
-    const shift = (lh - fs) / 2 - 0.9;
+    const shift = ((lh - fs) / 2) - 0.9;
     const brect = block.getBoundingClientRect();
     const top0 = brect.top;
     const padT = parseFloat(st.paddingTop);
