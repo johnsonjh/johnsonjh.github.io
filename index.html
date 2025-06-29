@@ -110,7 +110,7 @@
             html {
                 font-family: "EB Garamond";
                 font-kerning: normal;
-                font-size: 1.35em;
+                font-size: 1.25em;
                 font-feature-settings:
                     "calt" 1,
                     "clig" 1,
@@ -123,14 +123,7 @@
                 -webkit-text-size-adjust: 100%;
                 -ms-text-size-adjust: 100%;
                 text-align: justify;
-                text-wrap: pretty;
                 text-rendering: optimizeLegibility;
-            }
-
-            @media (max-width: 700px) {
-                body {
-                    font-size: 0.8em;
-                }
             }
 
             .columns-section {
@@ -138,11 +131,23 @@
                 column-gap: 2em;
                 padding: 1em;
                 text-align: justify;
-                text-wrap: balance;
-                text-wrap: pretty;
+                font-size: 95%;
             }
 
-            @media (max-width: 800px) {
+            .columns-container > * {
+                -webkit-column-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .columns-container {
+                overflow: auto;
+                padding-bottom: 4em;
+            }
+
+            @media (max-width: 1280px) {
+                body {
+                    font-size: 95%;
+                }
                 .columns-section {
                     column-count: 1;
                 }
@@ -153,6 +158,14 @@
                 font-weight: bold;
                 unicode-bidi: isolate;
                 white-space: nowrap;
+                transition:
+                    opacity 0.3s,
+                    color 0.3s;
+                opacity: 1;
+            }
+
+            .pending-transform.fading {
+                opacity: 0;
             }
 
             .transformed {
@@ -160,6 +173,11 @@
                 unicode-bidi: isolate;
                 white-space: nowrap;
                 display: contents;
+                color: inherit;
+                transition:
+                    opacity 0.3s,
+                    color 0.3s;
+                opacity: 1;
             }
 
             .char {
@@ -327,7 +345,7 @@
                 position: relative;
                 right: -0.8em;
                 transform: translateZ(0);
-                text-align: left;
+                text-align: justify;
                 width: auto;
                 display: table;
             }
@@ -335,6 +353,8 @@
             .verse .vline {
                 display: block;
                 position: relative;
+                text-align: justify;
+                white-space: nowrap;
             }
 
             .verse .vline::before {
@@ -342,6 +362,8 @@
                 left: -0.6em;
                 position: absolute;
                 top: 0;
+                text-align: right;
+                white-space: nowrap;
             }
 
             .verse .vline .closer {
@@ -895,22 +917,66 @@
                 wrapChars(document.body);
 
                 document.body.style.visibility = "visible";
+                /*
+                async function animateParagraphs(paragraphs, batchSize = 16) {
+                    for (const p of paragraphs) {
+                        const charSpans = Array.from(p.querySelectorAll(".char"));
+                        let i = 0;
 
-                async function animateParagraphs(paragraphs, sConversionDelay = 10) {
+                        function insideAnimateBatch() {
+                            for (let j = 0; j < batchSize && i < charSpans.length; j++, i++) {
+                                const span = charSpans[i];
+                                span.classList.add("visible");
+                                if (span.classList.contains("pending-transform")) {
+                                    span.classList.remove("pending-transform");
+                                    span.classList.add("transformed");
+                                }
+                            }
+                            if (i < charSpans.length) {
+                                requestAnimationFrame(insideAnimateBatch);
+                            }
+                        }
+                        insideAnimateBatch();
+                    }
+                }*/
+                /*
+                function fadeOutIn(span) {
+                    span.classList.add("fading");
+
+                    setTimeout(() => {
+                        span.classList.remove("pending-transform", "fading");
+                        span.classList.add("transformed");
+                    }, 505);
+                }
+
+                async function animateParagraphs(paragraphs) {
                     for (const p of paragraphs) {
                         const charSpans = p.querySelectorAll(".char");
 
                         for (const span of charSpans) {
                             span.classList.add("visible");
-
                             if (span.classList.contains("pending-transform")) {
-                                await new Promise((resolve) =>
-                                    setTimeout(resolve, sConversionDelay),
-                                );
-                                span.classList.remove("pending-transform");
-                                span.classList.add("transformed");
+                                fadeOutIn(span);
                             }
                         }
+                    }
+                }*/
+                async function animateParagraphs(paragraphs, fadeDuration = 200, stagger = 5) {
+                    for (const p of paragraphs) {
+                        const spans = p.querySelectorAll(".char.pending-transform");
+
+                        spans.forEach((span) => {
+                            span.classList.add("fading");
+                        });
+
+                        await new Promise((resolve) => setTimeout(resolve, fadeDuration));
+
+                        spans.forEach((span) => {
+                            span.classList.remove("pending-transform", "fading");
+                            span.classList.add("transformed");
+                        });
+
+                        await new Promise((resolve) => setTimeout(resolve, stagger));
                     }
                 }
 

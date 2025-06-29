@@ -110,20 +110,13 @@
             html {
                 font-family: "EB Garamond";
                 font-kerning: normal;
-                font-size: 1.35em;
+                font-size: 1.25em;
                 font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "hist" 1, "hlig" 1, "liga" 1, "kern" 1;
                 margin: 4% 9% 0.2% 9%;
                 -webkit-text-size-adjust: 100%;
                 -ms-text-size-adjust: 100%;
                 text-align: justify;
-                text-wrap: pretty;
                 text-rendering: optimizeLegibility;
-            }
-
-            @media (max-width: 700px) {
-                body {
-                    font-size: 0.8em;
-                }
             }
 
             .columns-section {
@@ -131,11 +124,23 @@
                 column-gap: 2em;
                 padding: 1em;
                 text-align: justify;
-                text-wrap: balance;
-                text-wrap: pretty;
+                font-size: 95%;
             }
 
-            @media (max-width: 800px) {
+            .columns-container > * {
+                -webkit-column-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .columns-container {
+                overflow: auto;
+                padding-bottom: 4em;
+            }
+
+            @media (max-width: 1280px) {
+                body {
+                    font-size: 95%;
+                }
                 .columns-section {
                     column-count: 1;
                 }
@@ -146,6 +151,12 @@
                 font-weight: bold;
                 unicode-bidi: isolate;
                 white-space: nowrap;
+                transition: opacity 0.3s, color 0.3s;
+                opacity: 1;
+            }
+
+            .pending-transform.fading {
+                opacity: 0;
             }
 
             .transformed {
@@ -153,6 +164,9 @@
                 unicode-bidi: isolate;
                 white-space: nowrap;
                 display: contents;
+                color: inherit;
+                transition: opacity 0.3s, color 0.3s;
+                opacity: 1;
             }
 
             .char {
@@ -314,7 +328,7 @@
                 position: relative;
                 right: -0.8em;
                 transform: translateZ(0);
-                text-align: left;
+                text-align: justify;
                 width: auto;
                 display: table;
             }
@@ -322,6 +336,8 @@
             .verse .vline {
                 display: block;
                 position: relative;
+                text-align: justify;
+                white-space: nowrap;
             }
 
             .verse .vline::before {
@@ -329,6 +345,8 @@
                 left: -0.6em;
                 position: absolute;
                 top: 0;
+                text-align: right;
+                white-space: nowrap;
             }
 
             .verse .vline .closer {
@@ -374,6 +392,10 @@
             a:hover {
                 text-decoration-style: double;
             }
+
+
+
+
         </style>
 
         <script>
