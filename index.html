@@ -139,6 +139,15 @@
                 padding-bottom: 4em;
             }
 
+            @media (orientation: landscape) {
+                body {
+                    font-size: 95%;
+                }
+                .columns-section {
+                    column-count: 2;
+                }
+            }
+
             @media (max-width: 700px) {
                 body {
                     font-size: 95%;
@@ -870,7 +879,7 @@
 
                 document.body.style.visibility = "visible";
 
-                async function animateParagraphs(paragraphs, batchSize = 16) {
+                async function animateParagraphs(paragraphs, batchSize = 3) {
                     for (const p of paragraphs) {
                         const charSpans = Array.from(p.querySelectorAll(".char"));
                         let i = 0;
