@@ -110,7 +110,7 @@
             html {
                 font-family: "EB Garamond";
                 font-kerning: normal;
-                font-size: 1.25em;
+                font-size: 1.05em;
                 font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "hist" 1, "hlig" 1, "liga" 1, "kern" 1;
                 margin: 4% 9% 0.2% 9%;
                 -webkit-text-size-adjust: 100%;
@@ -124,7 +124,7 @@
                 column-gap: 2em;
                 padding: 1em;
                 text-align: justify;
-                font-size: 95%;
+                font-size: 96%;
             }
 
             .columns-container {
@@ -132,7 +132,7 @@
                 padding-bottom: 4em;
             }
 
-            @media (max-width: 1000px) {
+            @media (max-width: 700px) {
                 body {
                     font-size: 95%;
                 }
@@ -142,7 +142,7 @@
             }
 
             .pending-transform {
-                color: red;
+                color: crimson;
                 font-weight: bold;
                 unicode-bidi: isolate;
                 white-space: nowrap;
@@ -311,60 +311,6 @@
                 font-family: "Symbola";
             }
 
-            blockquote.verse {
-                font-size: 90%;
-                font-style: italic;
-                line-height: 1.4;
-                margin: 0em;
-                padding-left: 0em;
-                padding-right: 0.8em;
-                position: relative;
-                right: -0.8em;
-                transform: translateZ(0);
-                text-align: justify;
-                width: auto;
-                display: table;
-                break-inside: avoid-column;
-                -webkit-column-break-inside: avoid;
-            }
-
-            .verse .vline {
-                display: block;
-                position: relative;
-                text-align: left;
-            }
-
-            .verse .vline::before {
-                content: "“";
-                left: -0.6em;
-                position: absolute;
-                top: 0;
-                text-align: right;
-                white-space: nowrap;
-            }
-
-            .verse .vline .closer {
-                position: relative;
-            }
-
-            blockquote.verse.justify-right {
-                text-align: right !important;
-            }
-
-            blockquote.verse.justify-right,
-            blockquote.verse.justify-right * {
-                text-align: right !important;
-                display: block;
-            }
-
-            blockquote.verse.justify-right::before {
-              content: none !important;
-            }
-
-            blockquote {
-                font-feature-settings: "hlig" 0;
-            }
-
             .tight-s {
                 letter-spacing: -0.092em;
             }
@@ -400,11 +346,9 @@
             a:hover {
                 text-decoration-style: double;
             }
-
-
-
-
         </style>
+
+        <link rel="stylesheet" href="conquote.css">
 
         <script>
             (function () {

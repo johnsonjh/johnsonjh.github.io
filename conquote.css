@@ -1,0 +1,40 @@
+blockquote.styled-quote {
+  -webkit-column-break-inside: avoid;
+  column-break-inside: avoid;
+  break-inside: avoid-column;
+  margin: 0 0 1.5rem;
+  padding: 0 0.6rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  font-size: 95%;
+  line-height: 1.2;
+  text-align: justify;
+  text-wrap: pretty;
+  position: relative;
+  text-align-last: left;
+  font-feature-settings: "hlig" 0;
+  font-style: italic;
+}
+
+.styled-quote[data-align="right"] {
+  text-align-last: right;
+}
+
+.quote-mark {
+  position: absolute;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.styled-quote[data-align="left"] .quote-mark {
+  left: 0.125rem;
+}
+
+.styled-quote[data-align="right"] .quote-mark {
+  right: 0.125rem;
+}
+
+.quote-original {
+  display: inline;
+}

@@ -1,4 +1,4 @@
-<!-- vim: set expandtab ft=html : -->
+<!-- vim: set noai nocindent expandtab ft=html : -->
         <p>
             The fictitious affluent coffee sufficient official different office Thistle Thames staff
             acta select skies standard cctt sstt FFI ffi ffl.&nbsp;
@@ -75,13 +75,13 @@
             quod dolor sit.&nbsp;
         </p>
 
-        <blockquote class="verse">
+        <blockquote class="styled-quote"><span class="quote-original">
             When you are old and grey and full of sleep and nodding by the fire, Take
             down this book, and slowly read, and dream of the soft look Your eyes had
             once, and of their shadows deep;&nbsp; How many loved your moments of glad
             grace, And loved your beauty with love false or true, but one man loved
             the pilgrim soul in you.&nbsp;
-        </blockquote>
+        </span></blockquote>
 
         <p>
             Special words and characters render as so: Æther, chymical, Quality, naïveté, ⅓,
@@ -100,23 +100,28 @@
             15th 16th 17th 18th 19th 20th.&nbsp;
         </p>
 
-          <section class="columns-section">
-    <h3>Multi-Column Example</h3>
+    <section class="columns-section">
     <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros.</p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp; Etiam et pulvinar nisi.&nbsp; Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna.&nbsp; Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien.&nbsp; In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros.</p>
 
-    <p>Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+    <p>Vivamus nec sapien at lectus posuere dignissim.&nbsp; Nunc et dui euismod, pharetra enim eu, faucibus urna.&nbsp; Pellentesque nec turpis sed enim lacinia luctus.&nbsp; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.&nbsp; Mauris ac consequat lectus.&nbsp;
 
-        <blockquote class="verse">
+    <p>Integer dictum lobortis purus, vitae elementum eros volutpat nec.&nbsp; Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt.&nbsp; In posuere urna nec ullamcorper pulvinar.&nbsp; Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+    <blockquote class="styled-quote"><span class="quote-original">
+        Now is the time for all good men to come to the aid the Party, party, party time!
+    </span></blockquote>
+    </section>
+
+        <blockquote class="styled-quote"><span class="quote-original">
             When you are old and grey and full of sleep and nodding by the fire, Take
             down this book, and slowly read, and dream of the soft look Your eyes had
             once, and of their shadows deep;&nbsp; How many loved your moments of glad
             grace, And loved your beauty with love false or true, but one man loved
             the pilgrim soul in you.&nbsp;
-        </blockquote>
+        </span></blockquote>
 
         <p>
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.</p>
+    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&nbsp; Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui.&nbsp; Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis.&nbsp; Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros.&nbsp; Sed a placerat ipsum.&nbsp; Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi.&nbsp; Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet.&nbsp; Integer molestie facilisis urna, ac dictum dolor malesuada at.&nbsp; Mauris commodo risus mauris, et porta libero gravida vel.&nbsp; Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem.&nbsp; Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.</p>
 
         <ul>
             <li>
@@ -138,71 +143,36 @@
             </li>
         </ul>
 
-        <p>Ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus. Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+        <p>Ipsum dolor sit amet, consectetur adipiscing elit.&nbsp; Etiam et pulvinar nisi.&nbsp; Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna.&nbsp; Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien.&nbsp; In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros.&nbsp; Vivamus nec sapien at lectus posuere dignissim.&nbsp; Nunc et dui euismod, pharetra enim eu, faucibus urna.&nbsp; Pellentesque nec turpis sed enim lacinia luctus.&nbsp; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.&nbsp; Mauris ac consequat lectus.&nbsp; Integer dictum lobortis purus, vitae elementum eros volutpat nec.&nbsp; Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt.&nbsp; In posuere urna nec ullamcorper pulvinar.&nbsp; Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et pulvinar nisi. Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna. Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien. In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros. Vivamus nec sapien at lectus posuere dignissim. Nunc et dui euismod, pharetra enim eu, faucibus urna. Pellentesque nec turpis sed enim lacinia luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.</p> <p>Mauris ac consequat lectus. Integer dictum lobortis purus, vitae elementum eros volutpat nec. Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt. In posuere urna nec ullamcorper pulvinar. Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp; Etiam et pulvinar nisi.&nbsp; Pellentesque euismod, sem ac pretium cursus, nulla magna porta dolor, vitae dictum nulla eros at urna.&nbsp; Mauris placerat, orci eu dictum cursus, risus nunc varius mi, nec ultricies risus purus nec sapien.&nbsp; In euismod, dolor nec pulvinar mattis, mauris enim lacinia lacus, eu tincidunt dui velit ac eros.&nbsp; Vivamus nec sapien at lectus posuere dignissim.&nbsp; Nunc et dui euismod, pharetra enim eu, faucibus urna.&nbsp; Pellentesque nec turpis sed enim lacinia luctus.&nbsp; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam iaculis, odio eget hendrerit tincidunt, mi sem pharetra turpis, ac laoreet urna urna eget lectus.</p> <p>Mauris ac consequat lectus.&nbsp; Integer dictum lobortis purus, vitae elementum eros volutpat nec.&nbsp; Proin tincidunt eros vitae nisi sollicitudin, non sagittis enim tincidunt.&nbsp; In posuere urna nec ullamcorper pulvinar.&nbsp; Etiam in lacus dictum, viverra urna sed, sodales tellus.</p>
 
-        <blockquote class="verse">
+        <blockquote class="styled-quote"><span class="quote-original">
             April is the cruellest month, breeding
-        </blockquote>
-        <blockquote class="verse">
             Lilacs out of the dead land, mixing
-        </blockquote>
-        <blockquote class="verse">
             Memory and desire, stirring
-        </blockquote>
-        <blockquote class="verse">
-            Dull roots with spring rain.
-        </blockquote>
-        <blockquote class="verse">
+            Dull roots with spring rain.&nbsp;
             Winter kept us warm, covering
-        </blockquote>
-        <blockquote class="verse">
             Earth in forgetful snow, feeding
-        </blockquote>
-        <blockquote class="verse">
-            A little life with dried tubers.
-        </blockquote>
-        <blockquote class="verse">
+            A little life with dried tubers.&nbsp;
             Summer surprised us, coming over the Starnbergersee
-        </blockquote>
-        <blockquote class="verse">
             With a shower of rain; we stopped in the colonnade,
-        </blockquote>
-        <blockquote class="verse">
             And went on in sunlight, into the Hofgarten,
-        </blockquote>
-        <blockquote class="verse">
-            And drank coffee, and talked for an hour.
-        </blockquote>
-        <blockquote class="verse">
-            Bin gar keine Russin, stamm’ aus Litauen, echt deutsch.
-        </blockquote>
-        <blockquote class="verse">
+            And drank coffee, and talked for an hour.&nbsp;
+            Bin gar keine Russin, stamm’ aus Litauen, echt deutsch.&nbsp;
             And when we were children, staying at the archduke’s,
-        </blockquote>
-        <blockquote class="verse">
             My cousin’s, he took me out on a sled,
-        </blockquote>
-        <blockquote class="verse">
-            And I was frightened. He said, Marie,
-        </blockquote>
-        <blockquote class="verse">
-            Marie, hold on tight. And down we went.
-        </blockquote>
-        <blockquote class="verse">
-            In the mountains, there you feel free.
-        </blockquote>
-        <blockquote class="verse">
-            I read, much of the night, and go south in the winter.
-        </blockquote>
+            And I was frightened.&nbsp; He said, Marie,
+            Marie, hold on tight.&nbsp; And down we went.&nbsp;
+            In the mountains, there you feel free.&nbsp;
+            I read, much of the night, and go south in the winter.&nbsp;
+        </span></blockquote>
 
-        <p>Tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui. Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis. Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros. Sed a placerat ipsum. Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi. Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet. Integer molestie facilisis urna, ac dictum dolor malesuada at. Mauris commodo risus mauris, et porta libero gravida vel. Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem. Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.
+        <p>Tristique senectus et netus et malesuada fames ac turpis egestas.&nbsp; Morbi pretium, metus ac scelerisque cursus, odio urna eleifend erat, nec luctus eros urna nec dui.&nbsp; Praesent feugiat, nisi nec auctor iaculis, urna odio cursus odio, non consequat velit metus at turpis.&nbsp; Aenean pretium, ex sed scelerisque dictum, risus nibh tincidunt leo, ac dictum magna orci ac eros.&nbsp; Sed a placerat ipsum.&nbsp; Sed blandit, mauris nec laoreet tincidunt, justo justo sodales enim, eu consectetur enim arcu at nisi.&nbsp; Duis euismod justo non neque ullamcorper, vitae cursus ipsum laoreet.&nbsp; Integer molestie facilisis urna, ac dictum dolor malesuada at.&nbsp; Mauris commodo risus mauris, et porta libero gravida vel.&nbsp; Nullam euismod, augue nec convallis feugiat, augue tellus tincidunt lorem, et dictum lacus justo vitae sem.&nbsp; Pellentesque pharetra, dolor ac dictum cursus, erat libero dictum enim, a facilisis nisi nulla at augue.&nbsp;
     </p>
-          </section>
 
         <p>
-            This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.
+            This is a <a href="https://github.com/johnsonjh/">link to GitHub</a>.&nbsp;
         </p>
 
         <p>
