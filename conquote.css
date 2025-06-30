@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2025 Jeffrey H. Johnson
+ * SPDX-License-Identifier: MIT
+ */
+
 blockquote.styled-quote {
   -webkit-column-break-inside: avoid;
   column-break-inside: avoid;

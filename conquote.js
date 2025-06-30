@@ -1,4 +1,9 @@
-function debounce(fn, ms = 100) {
+/*
+ * Copyright (c) 2025 Jeffrey H. Johnson
+ * SPDX-License-Identifier: MIT
+ */
+
+function conquoteDebounce(fn, ms = 100) {
   let tid;
 
   return (...args) => {
@@ -91,7 +96,7 @@ function layOutGutterQuotes() {
 function initGutterQuotes() {
   layOutGutterQuotes();
 
-  const ro = new ResizeObserver(debounce(layOutGutterQuotes, 100));
+  const ro = new ResizeObserver(conquoteDebounce(layOutGutterQuotes, 100));
   document
     .querySelectorAll("blockquote.styled-quote")
     .forEach((b) => ro.observe(b));
@@ -99,7 +104,7 @@ function initGutterQuotes() {
   if (window.visualViewport) {
     visualViewport.addEventListener(
       "resize",
-      debounce(layOutGutterQuotes, 100),
+      conquoteDebounce(layOutGutterQuotes, 100),
     );
   }
 
