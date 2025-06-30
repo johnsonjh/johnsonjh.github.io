@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2025 Jeffrey H. Johnson
+ * SPDX-License-Identifier: MIT
+ */
+
 (function () {
     const replacementTable = [
         ["0/3", "↉"],
