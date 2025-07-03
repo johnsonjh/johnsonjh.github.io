@@ -119,6 +119,7 @@
                 -ms-text-size-adjust: 100%;
                 text-align: justify;
                 text-rendering: optimizeLegibility;
+                hanging-punctuation: allow-end;
             }
 
             .columns-section {

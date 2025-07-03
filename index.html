@@ -126,6 +126,7 @@
                 -ms-text-size-adjust: 100%;
                 text-align: justify;
                 text-rendering: optimizeLegibility;
+                hanging-punctuation: allow-end;
             }
 
             .columns-section {
@@ -369,6 +370,13 @@
 
             a:hover {
                 text-decoration-style: double;
+            }
+
+            .sentence-space::after {
+                content: "";
+                display: inline-block;
+                width: 0.4em;
+                text-justify: inter-character;
             }
         </style>
 
@@ -800,7 +808,7 @@
                     font-size: 75%;
                     font-feature-settings: "smcp" 1;
                 '>
-                ultimum·​recognitum·​est·​ante·​diem·​Ⅲ·​kalendas·​iulias·​anno·​domini·​ⅯⅯⅩⅩⅤ
+                ultimum·​recognitum·​est·​ante·​diem·​Ⅴ·​nonas·​iulias·​anno·​domini·​ⅯⅯⅩⅩⅤ
             </span>
         </p>
         <hr
@@ -955,6 +963,10 @@
 
             window.addEventListener("DOMContentLoaded", function () {
                 document.documentElement.classList.remove("notransition");
+            });
+
+            document.querySelectorAll("p").forEach((p) => {
+                p.innerHTML = p.innerHTML.replace(/\.  /g, '.<span class="sentence-space"></span>');
             });
         </script>
         <script src="conquote.js"></script>
