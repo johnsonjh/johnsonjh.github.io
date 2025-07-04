@@ -1043,63 +1043,6 @@
         <!-- microtypographical tweaks for right-edge whitespace -->
         <script src="lineadjust.js" type="application/javascript"></script>
 
-        <!-- littlefoot, make sure this is last -->
-        <script src="littlefoot.js" type="application/javascript"></script>
-
-        <!-- Hotpatch littlefoot.js for roman numerals -->
-        <script>
-            function toRoman(num) {
-                const lookup = [
-                    ["Ⅿ", 1000],
-                    ["ⅭⅯ", 900],
-                    ["Ⅾ", 500],
-                    ["ⅭⅮ", 400],
-                    ["Ⅽ", 100],
-                    ["ⅩⅭ", 90],
-                    ["Ⅼ", 50],
-                    ["ⅩⅬ", 40],
-                    ["Ⅹ", 10],
-                    ["Ⅸ", 9],
-                    ["Ⅴ", 5],
-                    ["Ⅳ", 4],
-                    ["Ⅰ", 1],
-                ];
-                return lookup.reduce((acc, [k, v]) => {
-                    while (num >= v) {
-                        acc += k;
-                        num -= v;
-                    }
-                    return acc;
-                }, "");
-            }
-
-            document.addEventListener("DOMContentLoaded", () => {
-                littlefoot.littlefoot({
-                    activateOnHover: false,
-                    dismissOnUnhover: true,
-                    buttonTemplate: `
-                <button
-                  aria-label="Footnote <% number %>"
-                  class="littlefoot__button"
-                  id="<% reference %>"
-                  title="See Footnote <% number %>">
-                  <small class="lf-num"><% number %></small>
-                </button>
-              `,
-                });
-
-                /* Wait for buttons, then hotpatch them */
-                requestAnimationFrame(() => {
-                    document.querySelectorAll(".littlefoot__button .lf-num").forEach((el) => {
-                        const arabic = parseInt(el.textContent.trim(), 10);
-                        if (!isNaN(arabic)) {
-                            el.textContent = toRoman(arabic);
-                        }
-                    });
-                });
-            });
-        </script>
-
         <!-- Modal image zoom configuraton -->
         <div id="imgModal" class="modal">
             <span class="modal-close" style="font-family: Symbola">⭙</span>
