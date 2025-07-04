@@ -535,6 +535,9 @@
                 ></span
             >
         </p>
+        <!-- vim: set expandtab ft=html : -->
+        <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
+        <!-- SPDX-License-Identifier: MIT -->
 
         <p>
             I spent an embarrassing amount of time implementing "gutter quotes" or "continued
@@ -983,7 +986,7 @@
             </li>
         </ol>
 
-        <p>... a scan from the University of California:</p>
+        <p>… a scan from the University of California:</p>
 
         <ul>
             <li>
@@ -993,7 +996,7 @@
             </li>
         </ul>
 
-        <p>... and finally, a scan available online from Wellcome:</p>
+        <p>… and finally, a scan available online from Wellcome:</p>
 
         <ol>
             <li>
@@ -1272,61 +1275,6 @@
             " />
         <p></p>
 
-        <!-- modal image popup -->
-        <div id="imgModal" class="modal">
-            <span class="modal-close"><span style="font-family: &quot;Symbola&quot;">⭙</span></span>
-            <div class="spinner" id="spinner" style="display: none"></div>
-            <img id="modalImage" src="" alt="Full Size" />
-        </div>
-        <script>
-            const modal = document.getElementById("imgModal");
-            const modalImg = document.getElementById("modalImage");
-            const closeBtn = document.querySelector(".modal-close");
-            const spinner = document.getElementById("spinner");
-
-            document.querySelectorAll(".popup-img").forEach((img) => {
-                img.addEventListener("click", () => {
-                    const highRes = img.getAttribute("data-highres") || img.src;
-
-                    modalImg.src = "";
-                    modalImg.style.opacity = "0";
-                    spinner.style.display = "block";
-                    modal.style.display = "flex";
-
-                    const tempImg = new Image();
-                    tempImg.onload = () => {
-                        modalImg.src = tempImg.src;
-                        modalImg.alt = img.alt;
-                        modalImg.style.opacity = "1";
-                        spinner.style.display = "none";
-                    };
-
-                    tempImg.onerror = () => {
-                        console.error("Failed to load high-res image:", highRes);
-                        spinner.style.display = "none";
-                    };
-
-                    tempImg.src = highRes;
-                });
-            });
-
-            const closeModal = () => {
-                modal.style.display = "none";
-                modalImg.src = "";
-                modalImg.style.opacity = "0";
-            };
-
-            closeBtn.addEventListener("click", closeModal);
-
-            modal.addEventListener("click", (e) => {
-                if (e.target === modal) closeModal();
-            });
-
-            document.addEventListener("keydown", (e) => {
-                if (e.key === "Escape") closeModal();
-            });
-        </script>
-
         <!-- Long-s paragraph animations -->
         <script>
             function wrapFirstChar(paragraphs) {
@@ -1472,16 +1420,133 @@
         </script>
 
         <!-- Continued quotation style -->
-        <script src="conquote.js" type="application/javascript">
-            >
-        </script>
+        <script src="conquote.js" type="application/javascript"></script>
 
         <!-- House style substitutions -->
-        <script src="housestyle.js" type="application/javascript">
-            >
-        </script>
+        <script src="housestyle.js" type="application/javascript"></script>
 
         <!-- microtypographical tweaks for right-edge whitespace -->
-        <script src="lineadjust.js"></script>
+        <script src="lineadjust.js" type="application/javascript"></script>
+
+        <!-- littlefoot, make sure this is last -->
+        <script src="littlefoot.js" type="application/javascript"></script>
+
+        <!-- Hotpatch littlefoot.js for roman numerals -->
+        <script>
+            function toRoman(num) {
+                const lookup = [
+                    ["Ⅿ", 1000],
+                    ["ⅭⅯ", 900],
+                    ["Ⅾ", 500],
+                    ["ⅭⅮ", 400],
+                    ["Ⅽ", 100],
+                    ["ⅩⅭ", 90],
+                    ["Ⅼ", 50],
+                    ["ⅩⅬ", 40],
+                    ["Ⅹ", 10],
+                    ["Ⅸ", 9],
+                    ["Ⅴ", 5],
+                    ["Ⅳ", 4],
+                    ["Ⅰ", 1],
+                ];
+                return lookup.reduce((acc, [k, v]) => {
+                    while (num >= v) {
+                        acc += k;
+                        num -= v;
+                    }
+                    return acc;
+                }, "");
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                littlefoot.littlefoot({
+                    activateOnHover: false,
+                    dismissOnUnhover: true,
+                    buttonTemplate: `
+                <button
+                  aria-label="Footnote <% number %>"
+                  class="littlefoot__button"
+                  id="<% reference %>"
+                  title="See Footnote <% number %>">
+                  <small class="lf-num"><% number %></small>
+                </button>
+              `,
+                });
+
+                /* Wait for buttons, then hotpatch them */
+                requestAnimationFrame(() => {
+                    document.querySelectorAll(".littlefoot__button .lf-num").forEach((el) => {
+                        const arabic = parseInt(el.textContent.trim(), 10);
+                        if (!isNaN(arabic)) {
+                            el.textContent = toRoman(arabic);
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!-- Modal image zoom configuraton -->
+        <div id="imgModal" class="modal">
+            <span class="modal-close" style="font-family: Symbola">⭙</span>
+            <div class="spinner" id="spinner" style="display: none"></div>
+            <img id="modalImage" src="" alt="Full Size" />
+        </div>
+
+        <!-- Modal image zoom implementation -->
+        <script>
+            const modal = document.getElementById("imgModal");
+            const modalImg = document.getElementById("modalImage");
+            const closeBtn = document.querySelector(".modal-close");
+            const spinner = document.getElementById("spinner");
+
+            document.querySelectorAll(".popup-img").forEach((img) => {
+                img.addEventListener("click", () => {
+                    const highRes = img.getAttribute("data-highres") || img.src;
+
+                    modal.style.display = "flex";
+                    spinner.style.display = "block";
+                    modalImg.classList.remove("loaded");
+                    modalImg.src = "";
+
+                    const tempImg = new Image();
+
+                    tempImg.onload = () => {
+                        modalImg.src = tempImg.src;
+                        modalImg.alt = img.alt;
+                        modalImg.classList.add("loaded");
+                        spinner.style.display = "none";
+                    };
+
+                    tempImg.src = highRes;
+                });
+            });
+
+            const closeModal = () => {
+                modal.style.display = "none";
+                modalImg.src = "";
+                modalImg.classList.remove("loaded");
+            };
+
+            closeBtn.addEventListener("click", closeModal);
+
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") closeModal();
+            });
+
+            window.addEventListener("load", () => {
+                document.querySelectorAll(".popup-img").forEach((img) => {
+                    const highRes = img.getAttribute("data-highres");
+
+                    if (highRes) {
+                        const preloadImg = new Image();
+                        preloadImg.src = highRes;
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
