@@ -2,8 +2,10 @@
 <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
 <!-- SPDX-License-Identifier: MIT -->
 
+<!-- -==- START OF BLOG_1 TEMPLATE -==- -->
+
 <p>
-    I spent an embarrassing amount of time implementing "gutter quotes" or "continued quotations"
+    I spent an embarrassing amount of time implementing “gutter quotes” or “continued quotations”
     style quotations for this site.&nbsp; So for the TL;DR show me the code?&nbsp; My actual
     implementation (for now, sadly, only for <code>&lt;BLOCKQUOTE&gt;</code>’s) is on GitHub, in
     <a href="https://github.com/johnsonjh/johnsonjh.github.io/blob/master/conquote.js"
@@ -14,9 +16,9 @@
     >).&nbsp;
 </p>
 
-<p>So, what exactly do I mean by "gutter quotes" or "continued quotations"?</p>
+<p>So, what exactly do I mean by “gutter quotes” or “continued quotations”?&nbsp;</p>
 
-<p>Best to show some examples of this style in the wild:</p>
+<p>Best to show some examples of this style in the wild:&nbsp;</p>
 
 <p><span style="font-size: 200%; font-weight: bold">Physica Sacra</span></p>
 <p>Physica sacra, 1731-1735:</p>
@@ -36,7 +38,7 @@
     and printing of the <i>Physica sacra</i> was overseen by the publisher,
     <a href="https://www.britishmuseum.org/collection/term/BIOG41792"
         ><i>Johann Andreas Pfeffel</i></a
-    >, the Augsburg-based <i>Hofkupferstecher</i> (<i>lit.</i> "court copperplate engraver") to the
+    >, the Augsburg-based <i>Hofkupferstecher</i> (<i>lit.</i> “court copperplate engraver”) to the
     <i>Imperator Romanorum</i>,
     <a href="https://en.wikipedia.org/wiki/Charles_VI,_Holy_Roman_Emperor"
         >Holy Roman Emperor, Charles Ⅵ</a
@@ -47,7 +49,7 @@
     Absolutely every aspect of the layout and typography is practically <b><i>perfect</i></b
     >—<i>to the letter</i> (pun intended)—all the way down to
     <a href="https://en.wikipedia.org/wiki/Microtypography#Methods">microtypographical</a> nuances
-    like interword-spacing used when justifying the text, leaving no "rivers" of whitespace or other
+    like interword-spacing used when justifying the text, leaving no “rivers” of whitespace or other
     visual flaws, although they had <b>not</b> yet begun to systematically adopt more advanced
     layout techniques like character protrusion (<i>i.e.</i> margin kerning).&nbsp;
 </p>
@@ -110,7 +112,7 @@
 <p>
     For a bit more details about the work itself, you should read Stephanie Stillo’s
     <a href="https://jcblibrary.org/bound-images-stillo"
-        >Bound Images: Information Networks in Johann Jakob Scheuchzer’s
+        >Bound Images:&nbsp; Information Networks in Johann Jakob Scheuchzer’s
         <i>Physica sacra</i> (1731-1735)</a
     >
 </p>
@@ -133,13 +135,13 @@
         >A New Account of East-India and Persia</a
     >, or more properly,
     <i
-        >"A New Account of East-India and Persia, in Eight Letters.&nbsp; Being Nine Years Travels,
+        >“A New Account of East-India and Persia, in Eight Letters.&nbsp; Being Nine Years Travels,
         Begun 1672.&nbsp; And Finished 1681.&nbsp; Containing Observations made of the Moral,
-        Natural, and Artificial Estate of Those Countries: Namely, of their Government, Religion,
-        Laws, Customs.&nbsp; Of the Soil, Climates, Seasons, Health, Diseases.&nbsp; Of the Animals,
-        Vegetables, Minerals, Jewels.&nbsp; Of their Housing, Cloathing, Manufactures, Trades,
-        Commodities.&nbsp; And of the Coins, Weights, and Measures, Used in the Principal Places of
-        Trade in Those Parts."</i
+        Natural, and Artificial Estate of Those Countries:&nbsp; Namely, of their Government,
+        Religion, Laws, Customs.&nbsp; Of the Soil, Climates, Seasons, Health, Diseases.&nbsp; Of
+        the Animals, Vegetables, Minerals, Jewels.&nbsp; Of their Housing, Cloathing, Manufactures,
+        Trades, Commodities.&nbsp; And of the Coins, Weights, and Measures, Used in the Principal
+        Places of Trade in Those Parts.”</i
     >
 </p>
 
@@ -158,7 +160,7 @@
     edition is also available online, in three volumes:
     <a href="https://archive.org/details/in.ernet.dli.2015.57630">Ⅰ</a>,
     <a href="https://archive.org/details/in.ernet.dli.2015.57631">Ⅱ</a>,
-    <a href="https://archive.org/details/in.ernet.dli.2015.57632">Ⅲ</a>.&nbsp; This "modern" edition
+    <a href="https://archive.org/details/in.ernet.dli.2015.57632">Ⅲ</a>.&nbsp; This “modern” edition
     is, unfortunately, much less interesting typographically, as it eschews the traditional
     letterforms and ligatures.&nbsp; It does, however, retain the continued quotation style:
 </p>
@@ -171,7 +173,7 @@
     class="popup-img" />
 
 <p>
-    It should be noted that throughout <i>"A New Account"</i>, the primary way that quotations are
+    It should be noted that throughout <i>“A New Account”</i>, the primary way that quotations are
     typeset is the familiar indented block-quoted style.&nbsp; However, when that style is not used,
     all other quotes use the continued quotation style exclusively.&nbsp;
 </p>
@@ -188,13 +190,13 @@
 <p>
     The above excerpt comes from the 1749 (1st edition) printing of
     <a href="https://en.wikipedia.org/wiki/Joseph_Ames_(author)"><i>Joseph Ames’</i></a>
-    <i>"Typographical Antiquities"</i>, or more properly,<i
-        >"Typographical antiquities; Being an Historical Account of Printing in England: With some
-        Memoirs of our Antient Printers, And A Register of the Books Printed by Them, From The Year
-        ⅯⅭⅭⅭⅭⅬⅩⅪ [1471] to the Year ⅯⅮⅭ [1600].&nbsp; With An Appendix Concerning Printing in
-        Scotland and Ireland To the same Time.&nbsp; By Joseph Ames, F.R.S.&nbsp; And Secretary to
-        the Society of Antiquities.&nbsp; London: Printed by W. Faden, and sold by J. Robinson, in
-        Ludgate-Street.&nbsp; ⅯⅮⅭⅭⅩⅬⅠⅩ [1749]."</i
+    <i>“Typographical Antiquities”</i>, or more properly,<i
+        >“Typographical antiquities;&nbsp; Being an Historical Account of Printing in England:&nbsp;
+        With some Memoirs of our Antient Printers, And A Register of the Books Printed by Them, From
+        The Year ⅯⅭⅭⅭⅭⅬⅩⅪ [1471] to the Year ⅯⅮⅭ [1600].&nbsp; With An Appendix Concerning Printing
+        in Scotland and Ireland To the same Time.&nbsp; By Joseph Ames, F.R.S.&nbsp; And Secretary
+        to the Society of Antiquities.&nbsp; London:&nbsp; Printed by W. Faden, and sold by J.
+        Robinson, in Ludgate-Street.&nbsp; ⅯⅮⅭⅭⅩⅬⅠⅩ [1749].”</i
     >
 </p>
 
@@ -255,8 +257,8 @@
 </ul>
 
 <p>
-    … as well as this version (three volume edition of 1785-1790) from the SIM ("Serials in
-    Microform") collection:
+    … as well as this version (three volume edition of 1785-1790) from the SIM (“Serials in
+    Microform”) collection:
 </p>
 
 <ol>
@@ -291,13 +293,13 @@
 <p>
     … and most famously, the four volume 1810-1819 <i>Dibdin</i> edition:
     <i
-        >"Typographical Antiquities; or the History of Printing in England, Scotland, and Ireland:
+        >“Typographical Antiquities; or the History of Printing in England, Scotland, and Ireland:
         Containing Memoirs of our Ancient Printers, And A Register of the Books Printed by
         Them.&nbsp; Begun by the late Joseph Ames, F.R.&nbsp; and A.SS., considerably augmented by
         William Herbert, of Cheshunt, Herts; And now greatly enlarged, with Copious Notes, And
         Illustrated with Appropriate Engravings; Comprehending the History of English Literature,
         and a View of the Progress of the Art of Engraving, in Great Britain; by the Rev. Thomas
-        Frognall Dibdin."</i
+        Frognall Dibdin.”</i
     >
 </p>
 
@@ -429,11 +431,11 @@
 <p>
     (If you plan to explore this version, the
     <i
-        >"Index to Typographical Antiquities: An Index to Dibdin’s Edition of the Typographical
-        Antiquities first compiled by Joseph AMes, with some references to the intermediate edition
-        by William Herbert, Printed from a copy in the Library of Sion College.&nbsp; London:
-        Printed for the Bibliographical Society, by Blades, East &amp; Blades.&nbsp; December
-        1899."</i
+        >“Index to Typographical Antiquities:&nbsp; An Index to Dibdin’s Edition of the
+        Typographical Antiquities first compiled by Joseph AMes, with some references to the
+        intermediate edition by William Herbert, Printed from a copy in the Library of Sion
+        College.&nbsp; London: Printed for the Bibliographical Society, by Blades, East &amp;
+        Blades.&nbsp; December 1899.”</i
     >
     available <a href="https://archive.org/details/indextodibdinsed00maituoft/">here</a> or
     <a href="https://catalog.hathitrust.org/Record/100349465/Home">here</a> may be useful.)
@@ -450,9 +452,8 @@
 
 <p>
     By the 1810 edition, the <b>ſ</b>
-    <a href="https://en.wikipedia.org/wiki/Long_s">(long <i>ſ</i>)</a> has disappeared and "ct"
-    ligatures are gone, though many "classical" forms still remain (<i>i.e.</i> "Coūntry",
-    "Jmprinted").&nbsp;
+    <a href="https://en.wikipedia.org/wiki/Long_s">(long ‘s’)</a> has disappeared and “ct” ligatures
+    are gone, though many “classical” forms still remain (<i>i.e.</i> “Coūntry”, “Jmprinted”).&nbsp;
 </p>
 
 <p>Typographical Antiquities, 1810:<br /></p>
@@ -460,12 +461,12 @@
 
 <p>
     For the curious wanting to know more about <i>Typographical Antiquities</i>, I highly recommend
-    reading André de Melo Araújo’s "(Re)producing the English Printed Past: Antiquarian
-    Knowledge-Making Practices in Joseph Ames’s Typographical Antiquities (1749)", JHOK: Journal for
-    the History of Knowledge, Volume V, 2024, available
+    reading André de Melo Araújo’s “(Re)producing the English Printed Past:&nbsp; Antiquarian
+    Knowledge-Making Practices in Joseph Ames’s Typographical Antiquities (1749)”, JHOK:&nbsp;
+    Journal for the History of Knowledge, Volume V, 2024, available
     <a href="https://doi.org/10.55283/jhk.14845">here</a> (with a direct link to the PDF
     <a href="https://journalhistoryknowledge.org/article/view/14845/20625">here</a>) as well as
-    Elaine Shiner’s "Joseph Ames’s <i>Typographical Antiquities</i> and the Antiquarian Tradition",
+    Elaine Shiner’s “Joseph Ames’s <i>Typographical Antiquities</i> and the Antiquarian Tradition”,
     The Library Quarterly, Volume 83, Number 4, October 2023, pp. 362-367 (6 pages), available
     <a href="https://www.jstor.org/stable/10.1086/671919">here</a>.&nbsp;
 </p>
@@ -490,11 +491,11 @@
                 <a href="https://www.hrc.utexas.edu/">University of Texas at Austin</a>
                 <a href="https://en.wikipedia.org/wiki/Harry_Ransom_Center">Harry Ransom Center</a>
                 <a href="https://sites.utexas.edu/ransomcentermagazine">magazine</a> recently (2020)
-                showcased an actual <i>Owen Rogers 1561 "The Vision of Pierce Plowman"</i>, as
+                showcased an actual <i>Owen Rogers 1561 “The Vision of Pierce Plowman”</i>, as
                 mentioned in the sample texts above, in their article
                 <a
                     href="https://sites.utexas.edu/ransomcentermagazine/2020/01/15/revealing-an-english-schoolmasters-piers-plowman/"
-                    ><i>"Revealing an English Schoolmaster’s Piers Plowman"</i></a
+                    ><i>“Revealing an English Schoolmaster’s Piers Plowman”</i></a
                 >.&nbsp;
             </p>
         </li>
@@ -513,8 +514,8 @@
                     >Lawrence Warner</a
                 >, who has written <i>multiple books</i> on <i>Plowman</i>, has at least one
                 <i>full book</i>,
-                <i>"The Myth of Piers Plowman: Constructing a Medieval Literary Archive"</i>, freely
-                available online
+                <i>“The Myth of Piers Plowman:&nbsp; Constructing a Medieval Literary Archive”</i>,
+                freely available online
                 <a
                     href="https://library.oapen.org/bitstream/id/89bc88dd-3167-4e19-a159-b6212f3fda57/472471.pdf"
                     >here</a
@@ -532,12 +533,13 @@
             John Johnson (1777–1848), <i>“Typographia, or the Printer’s Instructor”</i> (1824), or
             more properly,
             <i
-                >"Typographia, or the Printer’s Instructor: Including an account of the Origin of
-                Printing, with Biographical Notices of the Printers of England, from Caxton to the
-                close of the Sixteenth Century: A Series of Ancient and Modern Alphabets, and
-                Domesday Characters: Together with An Elucidation of every Subject connected with
-                the Art.&nbsp; By J. Johnson, Printer.&nbsp; Published by Messrs. Longman, Hurst,
-                Rees, Orme, Brown &amp; Green, Paternoster Row, London.&nbsp; 1824"</i
+                >“Typographia, or the Printer’s Instructor:&nbsp; Including an account of the Origin
+                of Printing, with Biographical Notices of the Printers of England, from Caxton to
+                the close of the Sixteenth Century:&nbsp; A Series of Ancient and Modern Alphabets,
+                and Domesday Characters:&nbsp; Together with An Elucidation of every Subject
+                connected with the Art.&nbsp; By J. Johnson, Printer.&nbsp; Published by Messrs.
+                Longman, Hurst, Rees, Orme, Brown &amp; Green, Paternoster Row, London.&nbsp;
+                1824”</i
             >
             available in two volumes here:
             <a href="https://archive.org/details/typographiaorpri01john">Volume Ⅰ</a> and
@@ -550,7 +552,7 @@
 
     <li>
         <p class="tight">
-            Henry Robert Plomer (1856–1928), "A Short History of English Printing (1476–1898)", 1st
+            Henry Robert Plomer (1856–1928), “A Short History of English Printing (1476–1898)”, 1st
             Edition (1900), available
             <a href="https://archive.org/details/31383041405948">here</a> thanks to archive.org and
             the Vancouver Public Library.&nbsp;
@@ -559,14 +561,14 @@
     <ul>
         <li>
             <p class="tight">
-                "A Short History of English Printing (1476–1900)", Second (Popular) Edition (1915),
+                “A Short History of English Printing (1476–1900)”, Second (Popular) Edition (1915),
                 available
                 <a href="https://archive.org/details/shorthistoryofen00plom">here</a>.&nbsp;
             </p>
         </li>
         <li>
             <p class="tight">
-                "A Short History of English Printing (1476–1900)", Second Impression (1927),
+                “A Short History of English Printing (1476–1900)”, Second Impression (1927),
                 available
                 <a href="https://archive.org/details/in.ernet.dli.2015.76237/">here</a> (or
                 <a href="https://archive.org/details/in.ernet.dli.2015.167954">here</a>).&nbsp;
@@ -578,11 +580,11 @@
 
     <li>
         <p class="tight">
-            Thomas Curson Hansard (1776–1833), "Typographia: An Historical Sketch of The Origin and
-            Progress of The Art of Printing; with Practical Directions for Conducting Every
-            Department in an Office: With a description of Stereotype and Lithography.&nbsp;
-            Illustrated by Engravings, Biographical Notices, and Portraits." (1825), unfortunately
-            named with no relation to Johnson’s 1824 work.&nbsp; Available
+            Thomas Curson Hansard (1776–1833), “Typographia:&nbsp; An Historical Sketch of The
+            Origin and Progress of The Art of Printing; with Practical Directions for Conducting
+            Every Department in an Office:&nbsp; With a description of Stereotype and
+            Lithography.&nbsp; Illustrated by Engravings, Biographical Notices, and Portraits.”
+            (1825), unfortunately named with no relation to Johnson’s 1824 work.&nbsp; Available
             <a href="https://archive.org/details/b3329060x">here</a> thanks to archive.org and the
             Wellcome Collections.&nbsp;
         </p>
@@ -595,32 +597,34 @@
 <ul>
     <li>
         <p class="tight">
-            John Southward, "A Dictionary of Typography and Its Accessory Arts.", First Edition
+            John Southward, “A Dictionary of Typography and Its Accessory Arts.”, First Edition
             (1872), available
             <a href="https://archive.org/details/dictionaryoftypo00sout">here</a>.&nbsp;
         </p>
     </li>
     <li>
         <p class="tight">
-            John Southward, "A Dictionary of Typography and Its Accessory Arts.", Second Edition
+            John Southward, “A Dictionary of Typography and Its Accessory Arts.”, Second Edition
             (1875), available
             <a href="https://archive.org/details/dictionaryoftypo00soutuoft">here</a>.&nbsp;
         </p>
     </li>
     <li>
         <p class="tight">
-            Nicholas Rougeux, "A Brief Visual Exploration of
-            <i>A Dictionary of Typography and Its Accessory Arts.</i>", Web Edition (2020),
+            Nicholas Rougeux, “A Brief Visual Exploration of
+            <i>A Dictionary of Typography and Its Accessory Arts.</i>”, Web Edition (2020),
             available <a href="https://www.c82.net/typography/">here</a>.&nbsp;
         </p>
     </li>
     <ul>
         <li>
             <p class="tight">
-                Nicholas Rougeux, "The Making of A Brief Visual Exploration of A Dictionary of
-                Typography", December 2020,
+                Nicholas Rougeux, “The Making of A Brief Visual Exploration of A Dictionary of
+                Typography”, December 2020,
                 <a href="https://www.c82.net/blog/?id=86">here</a>.&nbsp;
             </p>
         </li>
     </ul>
 </ul>
+
+<!-- -==- END OF BLOG_1 TEMPLATE -==- -->

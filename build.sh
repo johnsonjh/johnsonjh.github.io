@@ -59,8 +59,10 @@ command -v npx > /dev/null 2>&1 && {
     --parser html        \
 	$(find . -name '*.template' ! -name 'closer.template')
 } || true
-sed -i top.template -e 's#</body>##'
-sed -i top.template -e 's#</html>##'
+sed -i top.template  \
+    -e 's#</body>##' \
+    -e 's#</html>##' \
+    -e 's/^    $//'
 
 ###########################################################
 # index.html
@@ -74,9 +76,10 @@ cat                 \
   > index.html
 latindate > index.template.date
 LATINDATE="$(cat index.template.date)"
-sed -i index.html -e "s/###LATINDATE###/${LATINDATE:?}/"
-sed -i index.html -e "s/###TITLE###/${TITLE:?}/"
-sed -i index.html -e "s%###BASEURL###%${BASEURL:?}%g"
+sed -i index.html                          \
+    -e "s/###LATINDATE###/${LATINDATE:?}/" \
+    -e "s/###TITLE###/${TITLE:?}/"         \
+    -e "s%###BASEURL###%${BASEURL:?}%g"
 
 ###########################################################
 # test.html
@@ -92,9 +95,10 @@ cat                    \
     closer.template    \
  > test.html
 LATINDATE="$(cat test.template.date)"
-sed -i test.html -e "s/###LATINDATE###/${LATINDATE:?}/"
-sed -i test.html -e "s/###TITLE###/${TITLE:?}/"
-sed -i test.html -e "s%###BASEURL###%${BASEURL:?}%g"
+sed -i test.html                           \
+    -e "s/###LATINDATE###/${LATINDATE:?}/" \
+    -e "s/###TITLE###/${TITLE:?}/"         \
+    -e "s%###BASEURL###%${BASEURL:?}%g"
 
 ###########################################################
 # blog_1.html
@@ -110,9 +114,10 @@ cat                    \
     closer.template    \
  > blog_1.html
 LATINDATE="$(cat blog_1.template.date)"
-sed -i blog_1.html -e "s/###LATINDATE###/${LATINDATE:?}/"
-sed -i blog_1.html -e "s/###TITLE###/${TITLE:?}/"
-sed -i blog_1.html -e "s%###BASEURL###%${BASEURL:?}%g"
+sed -i blog_1.html                         \
+    -e "s/###LATINDATE###/${LATINDATE:?}/" \
+    -e "s/###TITLE###/${TITLE:?}/"         \
+    -e "s%###BASEURL###%${BASEURL:?}%g"
 
 ################################################################################
 # Prettier (finalize)

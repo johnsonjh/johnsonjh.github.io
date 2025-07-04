@@ -1,6 +1,9 @@
 <!-- vim: set expandtab ft=html : -->
 <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
 <!-- SPDX-License-Identifier: MIT -->
+
+<!-- -==- START OF SIGNATURE TEMPLATE -==- -->
+
 <p style="white-space: nowrap">
     <span class="no-ligatures" style="font-family: Junicode; font-size: 70%; white-space: nowrap">
         <span style="vertical-align: -0.085em; font-family: Symbola; font-size: 150%">⅌  </span
@@ -15,3 +18,5 @@
         >pobox.com<i>&gt;</i></span
     >
 </p>
+
+<!-- -==- END OF SIGNATURE TEMPLATE -==- -->

@@ -1,6 +1,9 @@
 <!-- vim: set expandtab ft=html : -->
 <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
 <!-- SPDX-License-Identifier: MIT -->
+
+<!-- -==- START OF STARS TEMPLATE -==- -->
+
 <p class="title" style="text-align: center">
     <br /><span style="font-family: Junicode; font-size: 130%"
         ><sub>*</sub
@@ -9,3 +12,5 @@
         ></span
     >
 </p>
+
+<!-- -==- END OF STARS TEMPLATE -==- -->

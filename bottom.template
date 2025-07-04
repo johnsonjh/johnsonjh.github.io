@@ -1,6 +1,9 @@
 <!-- vim: set expandtab ft=html : -->
 <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
 <!-- SPDX-License-Identifier: MIT -->
+
+<!-- -==- START OF BOTTOM TEMPLATE -==- -->
+
 <!-- Footer with latin date -->
 <hr
     style="
@@ -250,3 +253,5 @@
         });
     });
 </script>
+
+<!-- -==- END OF BOTTOM TEMPLATE -==- -->
