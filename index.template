@@ -6,16 +6,19 @@
 
 <br />
 
-<hr
-    style="
-        width: 50%;
-        height: 4px;
-        border-style: inset;
-        display: block;
-        background-color: #192021;
-        border: none;
-        border-top: 4px solid #e0d3af;
-    " />
+<!-- Legacy center tag for Dillo rendering -->
+<center>
+    <hr
+        style="
+            width: 50%;
+            height: 4px;
+            border-style: inset;
+            display: block;
+            background-color: #192021;
+            border: none;
+            border-top: 4px solid #e0d3af;
+        " />
+</center>
 <p style="text-align: center">
     <span
         style="
@@ -104,16 +107,19 @@
         >&nbsp;VOL. Ⅰ</span
     ><br />
 </p>
-<hr
-    style="
-        width: 50%;
-        height: 4px;
-        border-style: inset;
-        display: block;
-        background-color: #192021;
-        border: none;
-        border-top: 4px solid #e0d3af;
-    " />
+<!-- Legacy center tag for Dillo rendering -->
+<center>
+    <hr
+        style="
+            width: 50%;
+            height: 4px;
+            border-style: inset;
+            display: block;
+            background-color: #192021;
+            border: none;
+            border-top: 4px solid #e0d3af;
+        " />
+</center>
 <br />
 
 <!-- ICON TABLE -->
