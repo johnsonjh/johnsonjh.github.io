@@ -13,7 +13,6 @@ blockquote.styled-quote {
   font-size: 95%;
   line-height: 1.2;
   text-align: justify;
-  text-wrap: pretty;
   position: relative;
   text-align-last: left;
   font-feature-settings: "hlig" 0;

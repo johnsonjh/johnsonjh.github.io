@@ -88,13 +88,13 @@
         <p>
             Special words and characters render as so: Æther, chymical, Quality, naïveté, ⅓,
             tête-à-tête, Uɴɪx<small>™</small>, zoöglœæ, coup dʼétat, chamæleon, coëfficient, über,
-            amœba, cause célèbre, reëstablished, <small>&c</small>.&nbsp;
+            amœba, cause célèbre, reëstablished, <small>&amp;c</small>.&nbsp;
         </p>
 
         <p>
             Quality automatic replacements?&nbsp; LaTeX re-integrated and reestablished the field of
             Unix pediatric palaeolithic zoology.&nbsp; Such is the magical color of alchemy,
-            <small>&c</small>.&nbsp; Take one per hour but do not exceed 4 + 1/4 per day.&nbsp;
+            <small>&amp;c</small>.&nbsp; Take one per hour but do not exceed 4 + 1/4 per day.&nbsp;
         </p>
 
         <p>
@@ -134,7 +134,7 @@
             <li>
                 <p class="tight">
                     <span
-                        ><i>Now</i> therefore, my son, love thy brethren, and despise not in thy heart thy brethren, the sons and daughters of thy people, in not taking a wife of them: for in pride is destruction and much trouble, and in lewdness is decay and great want: for lewdness is the mother of famine..&nbsp;<br><br></span
+                        ><i>Now</i> therefore, my son, love thy brethren, and despise not in thy heart thy brethren, the sons and daughters of thy people, in not taking a wife of them: for in pride is destruction and much trouble, and in lewdness is decay and great want: for lewdness is the mother of famine.&nbsp;<br><br></span
                     >
                 </p>
             </li>

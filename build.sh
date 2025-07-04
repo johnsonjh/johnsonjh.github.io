@@ -68,6 +68,23 @@ sed -i test.html -e "s/###LATINDATE###/${LATINDATE:?}/"
 sed -i test.html -e "s/###TITLE###/${TITLE:?}/"
 sed -i test.html -e "s%###BASEURL###%${BASEURL:?}%g"
 
+###########################################################
+# blog_1.html
+
+printf '%s\n' "• Build blog_1.html …" 2> /dev/null || true
+TITLE="Test Page"
+cat                    \
+    top.template       \
+    stars.template     \
+    blog_1.template    \
+    signature.template \
+    bottom.template    \
+ > blog_1.html
+LATINDATE="$(cat blog_1.template.date)"
+sed -i blog_1.html -e "s/###LATINDATE###/${LATINDATE:?}/"
+sed -i blog_1.html -e "s/###TITLE###/${TITLE:?}/"
+sed -i blog_1.html -e "s%###BASEURL###%${BASEURL:?}%g"
+
 ################################################################################
 # Prettier
 
@@ -85,6 +102,7 @@ command -v npx > /dev/null 2>&1 && {
     --tab-width 4        \
     --write              \
 	housestyle.js    \
+	blog_1.html      \
 	test.html        \
 	index.html
 } || true

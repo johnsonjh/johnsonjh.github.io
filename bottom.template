@@ -1,6 +1,7 @@
 <!-- vim: set expandtab ft=html : -->
 <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
 <!-- SPDX-License-Identifier: MIT -->
+        <!-- Footer with latin date -->
         <hr
             style="
                 width: 100%;
@@ -35,6 +36,62 @@
             " />
         <p></p>
 
+        <!-- modal image popup -->
+        <div id="imgModal" class="modal">
+          <span class="modal-close"><span style="font-family: 'Symbola';">⭙</span></span>
+          <div class="spinner" id="spinner" style="display: none;"></div>
+          <img id="modalImage" src="" alt="Full Size">
+        </div>
+        <script>
+          const modal = document.getElementById('imgModal');
+          const modalImg = document.getElementById('modalImage');
+          const closeBtn = document.querySelector('.modal-close');
+          const spinner = document.getElementById('spinner');
+
+          document.querySelectorAll('.popup-img').forEach(img => {
+            img.addEventListener('click', () => {
+              const highRes = img.getAttribute('data-highres') || img.src;
+
+              modalImg.src = '';
+              modalImg.style.opacity = '0';
+              spinner.style.display = 'block';
+              modal.style.display = 'flex';
+
+              const tempImg = new Image();
+              tempImg.onload = () => {
+                modalImg.src = tempImg.src;
+                modalImg.alt = img.alt;
+                modalImg.style.opacity = '1';
+                spinner.style.display = 'none';
+              };
+
+              tempImg.onerror = () => {
+                console.error('Failed to load high-res image:', highRes);
+                spinner.style.display = 'none';
+              };
+
+              tempImg.src = highRes;
+            });
+          });
+
+          const closeModal = () => {
+            modal.style.display = 'none';
+            modalImg.src = '';
+            modalImg.style.opacity = '0';
+          };
+
+          closeBtn.addEventListener('click', closeModal);
+
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+          });
+
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+          });
+        </script>
+
+        <!-- Long-s paragraph animations -->
         <script>
             function wrapFirstChar(paragraphs) {
                 for (const p of paragraphs) {
@@ -177,7 +234,14 @@
                 document.documentElement.classList.remove("notransition");
             });
         </script>
-        <script src="conquote.js"></script>
-        <script src="housestyle.js"></script>
+
+        <!-- Continued quotation style -->
+        <script src="conquote.js" type="application/javascript">></script>
+
+        <!-- House style substitutions -->
+        <script src="housestyle.js" type="application/javascript">></script>
+
+        <!-- microtypographical tweaks for right-edge whitespace -->
+        <script src="lineadjust.js"></script>
     </body>
 </html>
