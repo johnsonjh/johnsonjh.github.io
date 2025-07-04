@@ -11,12 +11,12 @@ blockquote.styled-quote {
   padding: 0 0.6rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   font-size: 95%;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: justify;
   position: relative;
   text-align-last: left;
   font-feature-settings: "hlig" 0;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .styled-quote[data-align="right"] {

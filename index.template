@@ -27,12 +27,13 @@
             font-family: &quot;EB Garamond&quot;;
             letter-spacing: 0.8em;
             font-size: 2.6vw;
-        "
-        ><b
-            ><span class="tight-dot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
-            >THE&nbsp;WEB&nbsp;PRESENCE&nbsp;OF</b
-        ></span
-    ><br />
+        ">
+        <b>
+            <span class="tight-dot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            THE&nbsp;WEB&nbsp;PRESENCE&nbsp;OF
+        </b>
+    </span>
+    <br />
     <span
         style="
             display: inline-block;
@@ -46,14 +47,18 @@
             padding-bottom: 0.3em;
             letter-spacing: 0.4em;
             font-size: 7vw;
-        "
-        ><b
-            ><span class="tight-dot">&nbsp;&nbsp;</span><span class="tighter-dot">J</span>.<span
-                class="tight-dot"
-                >H</span
-            >.<span class="tight-dot">&nbsp;</span>JOHNSON</b
-        ></span
-    ><br />
+        ">
+        <b>
+            <span class="tight-dot">&nbsp;&nbsp;</span>
+            <span class="tighter-dot">J</span>
+            .
+            <span class="tight-dot">H</span>
+            .
+            <span class="tight-dot">&nbsp;</span>
+            JOHNSON
+        </b>
+    </span>
+    <br />
     <!-- <span style="display: inline-block; font-family: 'EB Garamond'; letter-spacing: 0.2em; padding-top: 0.00em; padding-bottom: 0.5em; font-size: 2.0vw;"><b>&nbsp;CONSULTING</b></span><br> -->
     <span
         style="
@@ -68,18 +73,21 @@
             padding-bottom: 0em;
             letter-spacing: 0.33em;
             font-size: 4.9vw;
-        "
-        ><b>&nbsp;INFRASTRUCTURE</b></span
-    ><br />
+        ">
+        <b>&nbsp;INFRASTRUCTURE</b>
+    </span>
+    <br />
     <span
         style="
             display: inline-block;
             font-family: &quot;EB Garamond&quot;;
             letter-spacing: 0.4em;
             font-size: 3vw;
-        "
-        ><span class="tighter-dot">&nbsp;&nbsp;</span><b><i>&nbsp;&amp;</i></b></span
-    ><br />
+        ">
+        <span class="tighter-dot">&nbsp;&nbsp;</span>
+        <b><i>&nbsp;&amp;</i></b>
+    </span>
+    <br />
     <span
         style="
             display: inline-block;
@@ -92,9 +100,10 @@
             padding-top: 0em;
             letter-spacing: 0.48em;
             font-size: 3.6vw;
-        "
-        ><b>&nbsp;PLATFORM&nbsp;ENGINEER</b></span
-    ><br />
+        ">
+        <b>&nbsp;PLATFORM&nbsp;ENGINEER</b>
+    </span>
+    <br />
     <span
         style="
             display: inline-block;
@@ -103,9 +112,10 @@
             padding-top: 0.5em;
             padding-bottom: 0em;
             font-size: 2.6vw;
-        "
-        >&nbsp;VOL. Ⅰ</span
-    ><br />
+        ">
+        &nbsp;VOL. Ⅰ
+    </span>
+    <br />
 </p>
 <!-- Legacy center tag for Dillo rendering -->
 <center>
@@ -264,65 +274,72 @@
     <tr>
         <td>
             <div class="tooltip blog-tooltip">
-                <a href="test.html"
-                    ><img
+                <a href="test.html">
+                    <img
                         src="blog-dark.svg"
                         data-src-light="blog-dark.svg"
                         data-src-dark="blog-light.svg"
                         class="svg-hover-shadow table-icon"
-                        alt="Blog"
-                /></a>
-                <span class="tooltip-text blog-tooltip-text"
-                    ><span style="font-size: 140%">B</span>log</span
-                >
+                        alt="Blog" />
+                </a>
+                <span class="tooltip-text blog-tooltip-text">
+                    <span style="font-size: 140%">B</span>
+                    log
+                </span>
             </div>
         </td>
         <td>
             <div class="tooltip">
-                <a href="https://github.com/johnsonjh/"
-                    ><img
+                <a href="https://github.com/johnsonjh/">
+                    <img
                         src="github-dark.svg"
                         data-src-light="github-dark.svg"
                         data-src-dark="github-light.svg"
                         class="svg-hover-shadow table-icon"
-                        alt="GitHub"
-                /></a>
-                <span class="tooltip-text"
-                    ><span style="font-size: 130%">G</span>it<span style="font-size: 120%">H</span
-                    >ub</span
-                >
+                        alt="GitHub" />
+                </a>
+                <span class="tooltip-text">
+                    <span style="font-size: 130%">G</span>
+                    it
+                    <span style="font-size: 120%">H</span>
+                    ub
+                </span>
             </div>
         </td>
         <td>
             <div class="tooltip">
-                <a href="https://gitlab.com/johnsonjh/"
-                    ><img
+                <a href="https://gitlab.com/johnsonjh/">
+                    <img
                         src="gitlab-dark.svg"
                         data-src-light="gitlab-dark.svg"
                         data-src-dark="gitlab-light.svg"
                         class="svg-hover-shadow table-icon"
-                        alt="GitLab"
-                /></a>
-                <span class="tooltip-text"
-                    ><span style="font-size: 130%">G</span>it<span style="font-size: 120%">L</span
-                    >ab</span
-                >
+                        alt="GitLab" />
+                </a>
+                <span class="tooltip-text">
+                    <span style="font-size: 130%">G</span>
+                    it
+                    <span style="font-size: 120%">L</span>
+                    ab
+                </span>
             </div>
         </td>
         <td>
             <div class="tooltip email-tooltip">
-                <a href="mailto:trnsz@pobox.com"
-                    ><img
+                <a href="mailto:trnsz@pobox.com">
+                    <img
                         src="email-dark.svg"
                         data-src-light="email-dark.svg"
                         data-src-dark="email-light.svg"
                         class="svg-hover-shadow table-icon"
-                        alt="E-Mail"
-                /></a>
-                <span class="tooltip-text"
-                    ><span style="font-size: 140%"><i>e</i></span
-                    >-<span style="font-size: 130%">M</span>ail</span
-                >
+                        alt="E-Mail" />
+                </a>
+                <span class="tooltip-text">
+                    <span style="font-size: 140%"><i>e</i></span>
+                    -
+                    <span style="font-size: 130%">M</span>
+                    ail
+                </span>
             </div>
         </td>
     </tr>

@@ -520,8 +520,9 @@
                     font-variant: small-caps;
                     letter-spacing: 0.4em;
                     white-space: nowrap;
-                "
-                >​ <a
+                ">
+                ​ 
+                <a
                     href="###BASEURL###"
                     style="
                         color: inherit;
@@ -533,10 +534,10 @@
                         font-weight: inherit;
                         font-style: normal;
                         cursor: pointer;
-                    "
-                    >IlluminationeS</a
-                ></span
-            >
+                    ">
+                    IlluminationeS
+                </a>
+            </span>
         </p>
         <hr
             style="
@@ -550,11 +551,14 @@
             " />
 
         <p style="text-wrap: balance; max-width: 90vw; text-align: center">
-            <i
-                ><span style="font-size: 120%; font-feature-settings: &quot;swsh&quot; 1">S</span
-                >e<span class="tight-s">nſ</span>us <span class="tight-s">Eſ</span>sentiales et
-                Commentarii Collecti…</i
-            >
+            <i>
+                <span style="font-size: 120%; font-feature-settings: &quot;swsh&quot; 1">S</span>
+                e
+                <span class="tight-s">nſ</span>
+                us
+                <span class="tight-s">Eſ</span>
+                sentiales et Commentarii Collecti…
+            </i>
         </p>
 
         <!-- -==- END OF TOP TEMPLATE -==- -->

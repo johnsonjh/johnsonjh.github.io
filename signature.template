@@ -6,17 +6,21 @@
 
 <p style="white-space: nowrap">
     <span class="no-ligatures" style="font-family: Junicode; font-size: 70%; white-space: nowrap">
-        <span style="vertical-align: -0.085em; font-family: Symbola; font-size: 150%">⅌  </span
-        >Jeffrey&nbsp;H.&nbsp;Johnson</span
-    >  <span
-        class="no-ligatures"
-        style="font-family: Typewriter; font-size: 60%; white-space: nowrap"
-        ><i>&lt;</i>trnsz<span
+        <span style="vertical-align: -0.085em; font-family: Symbola; font-size: 150%">⅌  </span>
+        Jeffrey&nbsp;H.&nbsp;Johnson
+    </span>
+      
+    <span class="no-ligatures" style="font-family: Typewriter; font-size: 60%; white-space: nowrap">
+        <i>&lt;</i>
+        trnsz
+        <span
             class="no-ligatures"
-            style="font-family: Typewriter; font-size: 75%; white-space: nowrap"
-            >@</span
-        >pobox.com<i>&gt;</i></span
-    >
+            style="font-family: Typewriter; font-size: 75%; white-space: nowrap">
+            @
+        </span>
+        pobox.com
+        <i>&gt;</i>
+    </span>
 </p>
 
 <!-- -==- END OF SIGNATURE TEMPLATE -==- -->

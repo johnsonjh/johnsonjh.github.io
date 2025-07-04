@@ -5,12 +5,14 @@
 <!-- -==- START OF STARS TEMPLATE -==- -->
 
 <p class="title" style="text-align: center">
-    <br /><span style="font-family: Junicode; font-size: 130%"
-        ><sub>*</sub
-        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>*</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub
-            >*</sub
-        ></span
-    >
+    <br />
+    <span style="font-family: Junicode; font-size: 130%">
+        <sub>*</sub>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <sub>*</sub>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <sub>*</sub>
+    </span>
 </p>
 
 <!-- -==- END OF STARS TEMPLATE -==- -->
