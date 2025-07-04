@@ -1,256 +1,252 @@
 <!-- vim: set expandtab ft=html : -->
 <!-- Copyright (c) 2025 Jeffrey H. Johnson -->
 <!-- SPDX-License-Identifier: MIT -->
-        <!-- Footer with latin date -->
-        <hr
-            style="
-                width: 100%;
-                height: 2px;
-                border-style: inset;
-                display: block;
-                background-color: #192021;
-                border: none;
-                border-top: 2px solid #e0d3af;
-            " />
-        <p
-            class="tight"
-            style="text-wrap: balance; max-width: 100vw; text-align: center; font-size: 75%">
-            <span
-                style='
+<!-- Footer with latin date -->
+<hr
+    style="
+        width: 100%;
+        height: 2px;
+        border-style: inset;
+        display: block;
+        background-color: #192021;
+        border: none;
+        border-top: 2px solid #e0d3af;
+    " />
+<p class="tight" style="text-wrap: balance; max-width: 100vw; text-align: center; font-size: 75%">
+    <span
+        style='
                     font-family: Junicode,
                     font-size: 75%;
                     font-feature-settings: "smcp" 1;
                 '>
-                ###LATINDATE###
-            </span>
-        </p>
-        <hr
-            style="
-                width: 100%;
-                height: 2px;
-                border-style: inset;
-                display: block;
-                background-color: #192021;
-                border: none;
-                border-top: 2px solid #e0d3af;
-            " />
-        <p></p>
+        ###LATINDATE###
+    </span>
+</p>
+<hr
+    style="
+        width: 100%;
+        height: 2px;
+        border-style: inset;
+        display: block;
+        background-color: #192021;
+        border: none;
+        border-top: 2px solid #e0d3af;
+    " />
+<p></p>
 
-        <!-- Long-s paragraph animations -->
-        <script>
-            function wrapFirstChar(paragraphs) {
-                for (const p of paragraphs) {
-                    const nodes = Array.from(p.childNodes);
+<!-- Long-s paragraph animations -->
+<script>
+    function wrapFirstChar(paragraphs) {
+        for (const p of paragraphs) {
+            const nodes = Array.from(p.childNodes);
 
-                    for (const node of nodes) {
-                        if (node.nodeType === Node.TEXT_NODE) {
-                            const text = node.textContent.trimStart();
+            for (const node of nodes) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const text = node.textContent.trimStart();
 
-                            if (text.length === 0) continue;
+                    if (text.length === 0) continue;
 
-                            const index = node.textContent.indexOf(text[0]);
-                            const before = node.textContent.slice(0, index);
-                            const rest = node.textContent.slice(index + 1);
-                            const span = document.createElement("span");
+                    const index = node.textContent.indexOf(text[0]);
+                    const before = node.textContent.slice(0, index);
+                    const rest = node.textContent.slice(index + 1);
+                    const span = document.createElement("span");
 
-                            span.classList.add("dropcap");
-                            span.textContent = text[0];
+                    span.classList.add("dropcap");
+                    span.textContent = text[0];
 
-                            const frag = document.createDocumentFragment();
+                    const frag = document.createDocumentFragment();
 
-                            if (before) frag.appendChild(document.createTextNode(before));
+                    if (before) frag.appendChild(document.createTextNode(before));
 
-                            frag.appendChild(span);
+                    frag.appendChild(span);
 
-                            if (rest) frag.appendChild(document.createTextNode(rest));
+                    if (rest) frag.appendChild(document.createTextNode(rest));
 
-                            p.replaceChild(frag, node);
-                            break;
+                    p.replaceChild(frag, node);
+                    break;
+                }
+            }
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", async function () {
+        await document.fonts.ready;
+        const paragraphs = document.querySelectorAll("p, blockquote");
+        wrapFirstChar(paragraphs);
+
+        function wrapChars(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.textContent;
+                const frag = document.createDocumentFragment();
+
+                for (let i = 0; i < text.length; i++) {
+                    const span = document.createElement("span");
+
+                    span.classList.add("char");
+                    span.textContent = text[i];
+
+                    if (text[i] === "s" || text[i] === "J") {
+                        span.classList.add("pending-transform");
+                    }
+
+                    frag.appendChild(span);
+                }
+                node.parentNode.replaceChild(frag, node);
+            } else if (
+                node.nodeType === Node.ELEMENT_NODE &&
+                node.nodeName !== "SCRIPT" &&
+                node.nodeName !== "STYLE"
+            ) {
+                Array.from(node.childNodes).forEach((child) => wrapChars(child));
+            }
+        }
+
+        wrapChars(document.body);
+
+        document.body.style.visibility = "visible";
+
+        async function animateParagraphs(paragraphs, batchSize = 3) {
+            for (const p of paragraphs) {
+                const charSpans = Array.from(p.querySelectorAll(".char"));
+                let i = 0;
+
+                function insideAnimateBatch() {
+                    for (let j = 0; j < batchSize && i < charSpans.length; j++, i++) {
+                        const span = charSpans[i];
+                        span.classList.add("visible");
+                        if (span.classList.contains("pending-transform")) {
+                            span.classList.remove("pending-transform");
+                            span.classList.add("transformed");
                         }
                     }
-                }
-            }
-
-            document.addEventListener("DOMContentLoaded", async function () {
-                await document.fonts.ready;
-                const paragraphs = document.querySelectorAll("p, blockquote");
-                wrapFirstChar(paragraphs);
-
-                function wrapChars(node) {
-                    if (node.nodeType === Node.TEXT_NODE) {
-                        const text = node.textContent;
-                        const frag = document.createDocumentFragment();
-
-                        for (let i = 0; i < text.length; i++) {
-                            const span = document.createElement("span");
-
-                            span.classList.add("char");
-                            span.textContent = text[i];
-
-                            if (text[i] === "s" || text[i] === "J") {
-                                span.classList.add("pending-transform");
-                            }
-
-                            frag.appendChild(span);
-                        }
-                        node.parentNode.replaceChild(frag, node);
-                    } else if (
-                        node.nodeType === Node.ELEMENT_NODE &&
-                        node.nodeName !== "SCRIPT" &&
-                        node.nodeName !== "STYLE"
-                    ) {
-                        Array.from(node.childNodes).forEach((child) => wrapChars(child));
+                    if (i < charSpans.length) {
+                        requestAnimationFrame(insideAnimateBatch);
                     }
                 }
-
-                wrapChars(document.body);
-
-                document.body.style.visibility = "visible";
-
-                async function animateParagraphs(paragraphs, batchSize = 3) {
-                    for (const p of paragraphs) {
-                        const charSpans = Array.from(p.querySelectorAll(".char"));
-                        let i = 0;
-
-                        function insideAnimateBatch() {
-                            for (let j = 0; j < batchSize && i < charSpans.length; j++, i++) {
-                                const span = charSpans[i];
-                                span.classList.add("visible");
-                                if (span.classList.contains("pending-transform")) {
-                                    span.classList.remove("pending-transform");
-                                    span.classList.add("transformed");
-                                }
-                            }
-                            if (i < charSpans.length) {
-                                requestAnimationFrame(insideAnimateBatch);
-                            }
-                        }
-                        insideAnimateBatch();
-                    }
-                }
-
-                await animateParagraphs(paragraphs);
-
-                const lastPara = document.querySelector("p:last-of-type");
-
-                if (lastPara) {
-                    const shim = document.createElement("span");
-                    shim.textContent = "\u00A0.";
-                    shim.style.whiteSpace = "nowrap";
-                    shim.style.display = "inline";
-                    shim.style.opacity = "0";
-                    shim.style.fontSize = "0.01px";
-                    shim.setAttribute("aria-hidden", "true");
-                    lastPara.appendChild(shim);
-                }
-            });
-
-            function setTheme(dark) {
-                document.documentElement.classList.toggle("dark-mode", dark);
-                document.getElementById("theme-toggle").textContent = dark ? "☼" : "●";
+                insideAnimateBatch();
             }
+        }
 
-            function getStoredTheme() {
-                return localStorage.getItem("theme");
-            }
+        await animateParagraphs(paragraphs);
 
-            function storeTheme(theme) {
-                localStorage.setItem("theme", theme);
-            }
+        const lastPara = document.querySelector("p:last-of-type");
 
-            (function () {
-                const stored = getStoredTheme();
-                let dark = false;
+        if (lastPara) {
+            const shim = document.createElement("span");
+            shim.textContent = "\u00A0.";
+            shim.style.whiteSpace = "nowrap";
+            shim.style.display = "inline";
+            shim.style.opacity = "0";
+            shim.style.fontSize = "0.01px";
+            shim.setAttribute("aria-hidden", "true");
+            lastPara.appendChild(shim);
+        }
+    });
 
-                if (stored === "dark") dark = true;
-                else if (stored === "light") dark = false;
-                else dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    function setTheme(dark) {
+        document.documentElement.classList.toggle("dark-mode", dark);
+        document.getElementById("theme-toggle").textContent = dark ? "☼" : "●";
+    }
 
-                setTheme(dark);
-            })();
+    function getStoredTheme() {
+        return localStorage.getItem("theme");
+    }
 
-            document.getElementById("theme-toggle").onclick = function () {
-                const dark = !document.documentElement.classList.contains("dark-mode");
-                setTheme(dark);
-                storeTheme(dark ? "dark" : "light");
-            };
+    function storeTheme(theme) {
+        localStorage.setItem("theme", theme);
+    }
 
-            window.addEventListener("DOMContentLoaded", function () {
-                document.documentElement.classList.remove("notransition");
-            });
-        </script>
+    (function () {
+        const stored = getStoredTheme();
+        let dark = false;
 
-        <!-- Continued quotation style -->
-        <script src="conquote.js" type="application/javascript"></script>
+        if (stored === "dark") dark = true;
+        else if (stored === "light") dark = false;
+        else dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-        <!-- House style substitutions -->
-        <script src="housestyle.js" type="application/javascript"></script>
+        setTheme(dark);
+    })();
 
-        <!-- microtypographical tweaks for right-edge whitespace -->
-        <script src="lineadjust.js" type="application/javascript"></script>
+    document.getElementById("theme-toggle").onclick = function () {
+        const dark = !document.documentElement.classList.contains("dark-mode");
+        setTheme(dark);
+        storeTheme(dark ? "dark" : "light");
+    };
 
-        <!-- Modal image zoom configuraton -->
-        <div id="imgModal" class="modal">
-          <span class="modal-close" style="font-family: Symbola">⭙</span>
-          <div class="spinner" id="spinner" style="display: none;"></div>
-          <img id="modalImage" src="" alt="Full Size">
-        </div>
+    window.addEventListener("DOMContentLoaded", function () {
+        document.documentElement.classList.remove("notransition");
+    });
+</script>
 
-        <!-- Modal image zoom implementation -->
-        <script>
-          const modal = document.getElementById('imgModal');
-          const modalImg = document.getElementById('modalImage');
-          const closeBtn = document.querySelector('.modal-close');
-          const spinner = document.getElementById('spinner');
+<!-- Continued quotation style -->
+<script src="conquote.js" type="application/javascript"></script>
 
-          document.querySelectorAll('.popup-img').forEach(img => {
-            img.addEventListener('click', () => {
-              const highRes = img.getAttribute('data-highres') || img.src;
+<!-- House style substitutions -->
+<script src="housestyle.js" type="application/javascript"></script>
 
-              modal.style.display = 'flex';
-              spinner.style.display = 'block';
-              modalImg.classList.remove('loaded');
-              modalImg.src = '';
+<!-- microtypographical tweaks for right-edge whitespace -->
+<script src="lineadjust.js" type="application/javascript"></script>
 
-              const tempImg = new Image();
+<!-- Modal image zoom configuraton -->
+<div id="imgModal" class="modal">
+    <span class="modal-close" style="font-family: Symbola">⭙</span>
+    <div class="spinner" id="spinner" style="display: none"></div>
+    <img id="modalImage" src="" alt="Full Size" />
+</div>
 
-              tempImg.onload = () => {
+<!-- Modal image zoom implementation -->
+<script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".modal-close");
+    const spinner = document.getElementById("spinner");
+
+    document.querySelectorAll(".popup-img").forEach((img) => {
+        img.addEventListener("click", () => {
+            const highRes = img.getAttribute("data-highres") || img.src;
+
+            modal.style.display = "flex";
+            spinner.style.display = "block";
+            modalImg.classList.remove("loaded");
+            modalImg.src = "";
+
+            const tempImg = new Image();
+
+            tempImg.onload = () => {
                 modalImg.src = tempImg.src;
                 modalImg.alt = img.alt;
-                modalImg.classList.add('loaded');
-                spinner.style.display = 'none';
-              };
+                modalImg.classList.add("loaded");
+                spinner.style.display = "none";
+            };
 
-              tempImg.src = highRes;
-            });
-          });
+            tempImg.src = highRes;
+        });
+    });
 
-          const closeModal = () => {
-            modal.style.display = 'none';
-            modalImg.src = '';
-            modalImg.classList.remove('loaded');
-          };
+    const closeModal = () => {
+        modal.style.display = "none";
+        modalImg.src = "";
+        modalImg.classList.remove("loaded");
+    };
 
-          closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener("click", closeModal);
 
-          modal.addEventListener('click', e => {
-            if (e.target === modal) closeModal();
-          });
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
 
-          document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') closeModal();
-          });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+    });
 
-          window.addEventListener('load', () => {
-            document.querySelectorAll('.popup-img').forEach(img => {
-              const highRes = img.getAttribute('data-highres');
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".popup-img").forEach((img) => {
+            const highRes = img.getAttribute("data-highres");
 
-              if (highRes) {
+            if (highRes) {
                 const preloadImg = new Image();
                 preloadImg.src = highRes;
-              }
-            });
-          });
-        </script>
-    </body>
-</html>
+            }
+        });
+    });
+</script>

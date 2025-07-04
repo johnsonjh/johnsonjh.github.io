@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: MIT
 
 ################################################################################
+# Start
+printf '\n%s\n' "• Starting build$(env TZ=UTC date +' - %c' || true)"
+
+################################################################################
 # Strict
 
 set -eu
@@ -35,6 +39,29 @@ command -v shellcheck > /dev/null 2>&1 && {
 
 BASEURL="https://johnsonjh.github.io/"
 
+################################################################################
+# Prettier (templates)
+
+command -v npx > /dev/null 2>&1 || {
+  printf '%s\n' "⚠ npx missing!" 2> /dev/null || true
+} || true
+
+# shellcheck disable=SC2046
+command -v npx > /dev/null 2>&1 && {
+  printf '%s\n' "• Prettier (templates) …" 2> /dev/null || true
+  npx prettier           \
+    --bracket-same-line  \
+    --log-level error    \
+    --no-bracket-spacing \
+    --print-width 100    \
+    --tab-width 4        \
+    --write              \
+    --parser html        \
+	$(find . -name '*.template' ! -name 'closer.template')
+} || true
+sed -i top.template -e 's#</body>##'
+sed -i top.template -e 's#</html>##'
+
 ###########################################################
 # index.html
 
@@ -62,6 +89,7 @@ cat                    \
     test.template      \
     signature.template \
     bottom.template    \
+    closer.template    \
  > test.html
 LATINDATE="$(cat test.template.date)"
 sed -i test.html -e "s/###LATINDATE###/${LATINDATE:?}/"
@@ -79,6 +107,7 @@ cat                    \
     blog_1.template    \
     signature.template \
     bottom.template    \
+    closer.template    \
  > blog_1.html
 LATINDATE="$(cat blog_1.template.date)"
 sed -i blog_1.html -e "s/###LATINDATE###/${LATINDATE:?}/"
@@ -86,14 +115,10 @@ sed -i blog_1.html -e "s/###TITLE###/${TITLE:?}/"
 sed -i blog_1.html -e "s%###BASEURL###%${BASEURL:?}%g"
 
 ################################################################################
-# Prettier
-
-command -v npx > /dev/null 2>&1 || {
-  printf '%s\n' "⚠ npx missing!" 2> /dev/null || true
-} || true
+# Prettier (finalize)
 
 command -v npx > /dev/null 2>&1 && {
-  printf '%s\n' "• Prettier …" 2> /dev/null || true
+  printf '%s\n' "• Prettier (finalize) …" 2> /dev/null || true
   npx prettier           \
     --bracket-same-line  \
     --log-level error    \
@@ -117,4 +142,4 @@ grep -n 'etc\.' ./*.html && {
 ################################################################################
 # Finish
 
-printf '%s\n' "✓ Success!" || true
+printf '%s\n' "✓ Success$(env TZ=UTC date +' - %c' || true)"
